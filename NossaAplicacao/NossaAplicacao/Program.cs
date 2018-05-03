@@ -10,7 +10,11 @@ namespace NossaAplicacao
     {
         static void Main(string[] args)
         {
-            Console.WriteLine();
+
+            Console.WriteLine("Eu\"eduardo stolfi\"quero imprimir");
+
+            Console.WriteLine("Eu\"José Sidnei\"quero imprimir");
+
         }
     }
 }
