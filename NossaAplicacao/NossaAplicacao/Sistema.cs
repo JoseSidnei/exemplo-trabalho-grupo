@@ -23,9 +23,10 @@ namespace NossaAplicacao
 2 - Cadastro de pessoa Jurídica
 3 - Produtos
 4 - Cadastro Funcionarios do Restaurante 
-5 - 
-6 - 
-7 - Sair");
+5 - Listar Cadastros de pessoas Físicas
+6 - Listar Cadastros de pessoas Jurídicas
+7 -
+8 - Sair");
         }
         public void GeriMenu()
         {
