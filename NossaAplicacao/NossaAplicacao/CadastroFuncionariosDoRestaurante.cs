@@ -24,8 +24,23 @@ namespace NossaAplicacao
             Console.Write("Setor Que Trabalha: ");
             SetorQueTrabalha[atual] = Console.ReadLine();
             Console.Write("Turno Que Trabalha : ");
-            TurnoQueTrabalha[atual] = Console.ReadLine();          
+            TurnoQueTrabalha[atual] = Console.ReadLine();
             atual++;
         }
+        public void ListarFuncionarios()
+        {
+            Console.Clear();
+            Console.WriteLine("Lista Funcionarios ");
+            for (int i = 0; i < atual; i++)
+            {
+                Console.WriteLine(
+                    String.Format(
+                        "\nNome Funcionarios: {0} \nCodigo De Acesso: {1} \nSetor Que Trabalha: {2} \nTurno Que Trabalha: {3}",
+                       nomeFuncionario[i], codigoDeAcesso[i], SetorQueTrabalha[i], TurnoQueTrabalha[i])
+                        
+                    );
+            }
+        }
     }
-}
+ }
+    
