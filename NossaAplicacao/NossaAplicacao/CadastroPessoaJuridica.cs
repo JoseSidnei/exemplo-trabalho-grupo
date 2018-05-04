@@ -24,19 +24,19 @@ namespace NossaAplicacao
         {
             Console.Clear();
             Console.Write("Nome da empresa: ");
-            nomesEmpresa[atual] = Console.ReadLine();
+            nomesEmpresa[atual] = Console.ReadLine().ToLower().Trim();
             Console.Write("Telefone para contato: ");
             telefones[atual] = Convert.ToInt32(Console.ReadLine());
             Console.Write("Email: ");
-            emails[atual] = Console.ReadLine();
+            emails[atual] = Console.ReadLine().ToLower().Trim();
             Console.Write("Cidade: ");
-            cidades[atual] = Console.ReadLine();
+            cidades[atual] = Console.ReadLine().ToLower().Trim();
             Console.Write("Ebdereço: ");
-            enderecos[atual] = Console.ReadLine();
+            enderecos[atual] = Console.ReadLine().ToLower().Trim();
             Console.Write("Nº: ");
             numeros[atual] = Convert.ToInt32(Console.ReadLine());
             Console.Write("Bairro: ");
-            bairros[atual] = Console.ReadLine();
+            bairros[atual] = Console.ReadLine().ToLower().Trim();
             Console.Write("CEP: ");
             ceps[atual] = Convert.ToInt32(Console.ReadLine());
             Console.Write("Quantidade de funcionarios: ");
