@@ -9,6 +9,8 @@ namespace NossaAplicacao
     class Sistema
     {
         CadastroPessoaFisica cadastroDePessoasFisica = new CadastroPessoaFisica();
+        CadastroPessoaJuridica cacadastrarPessoaJuridica = new CadastroPessoaJuridica();
+        CadastrarProdutos cadatrarProdutos = new CadastrarProdutos();
         CadastroFuncionariosDoRestaurante cadastroDeFuncionarios = new CadastroFuncionariosDoRestaurante();
         
         
@@ -27,8 +29,9 @@ namespace NossaAplicacao
 4 - Cadastro Funcionarios do Restaurante 
 5 - Listar Cadastros de pessoas Físicas
 6 - Listar Cadastros de Funcionarios
-7 -
-8 - Sair");
+7 - Listar Produtos
+8 - Listar pessoa Jurídica 
+9 - Sair");
         }
         public void GeriMenu()
         {
@@ -43,10 +46,10 @@ namespace NossaAplicacao
                         cadastroDePessoasFisica.CadastroDePessoas();
                         break;
                     case 2:
-                        
+                        cacadastrarPessoaJuridica.CadastroPessoaJuridica();
                         break;
                     case 3:
-                        
+                        cadatrarProdutos.CadastrarProdutos();
                         break;
                     case 4:
                         cadastroDeFuncionarios.CadastroFuncionarios();
@@ -58,7 +61,10 @@ namespace NossaAplicacao
                         cadastroDeFuncionarios.ListarFuncionarios();
                         break;
                     case 7:
-
+                        cadatrarProdutos.ListarProdutos();
+                        break;
+                    case 8:
+                        cacadastrarPessoaJuridica.ListarPessoaJuridica();
                         break;
 
                 }
