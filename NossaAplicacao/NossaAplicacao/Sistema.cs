@@ -35,7 +35,11 @@ namespace NossaAplicacao
 10 - Buscar cadastro Pessoa jurídica
 11 - Buscar Produtos
 12 - Buscar Cadastro Funcionários
-13 - Sair");
+13 - Editarcadastro Pessoa Física
+14 - Editar cadastro Pessoa jurídica
+15 - Editar Produtos
+16 - Editar Cadastro Funcionários
+17 - Sair");
         }
         public void GeriMenu()
         {
@@ -81,6 +85,18 @@ namespace NossaAplicacao
                         break;
                     case 12:
                         cadastroDeFuncionarios.NomeBuscarFuncionario();
+                        break;
+                    case 13:
+                        
+                        break;
+                    case 14:
+                        cacadastrarPessoaJuridica.EditarPessoaJuridica();
+                        break;
+                    case 15:
+                        cadatrarProdutos.EditarProdutos();
+                        break;
+                    case 16:
+                        
                         break;
                     
 

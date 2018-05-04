@@ -89,5 +89,51 @@ namespace NossaAplicacao
                 Console.WriteLine("Nome não encontrado");
             }
         }
+
+        public void EditarPessoaJuridica()
+        {
+            Console.Clear();
+            Console.WriteLine("Digite um nome para pesquisa");
+            string nomePessoaJuridicaPesquisado = Console.ReadLine().ToLower().Trim();
+            int posicao = -1;
+            for (int i = 0; i < atual; i++)
+            {
+                if (nomePessoaJuridicaPesquisado == nomesEmpresa[i])
+                {
+                    posicao = i;
+                }
+            }
+
+            if (posicao != -1)
+            {
+                // encontrou o registro procurado
+                Console.Write("Nome da empresa: ");
+                nomesEmpresa[atual] = Console.ReadLine().ToLower().Trim();
+                Console.Write("Telefone para contato: ");
+                telefones[atual] = Convert.ToInt32(Console.ReadLine());
+                Console.Write("Email: ");
+                emails[atual] = Console.ReadLine().ToLower().Trim();
+                Console.Write("Ebdereço: ");
+                enderecos[atual] = Console.ReadLine().ToLower().Trim();
+                Console.Write("Cidade: ");
+                cidades[atual] = Console.ReadLine().ToLower().Trim();
+                Console.Write("Nº: ");
+                numeros[atual] = Convert.ToInt32(Console.ReadLine());
+                Console.Write("Bairro: ");
+                bairros[atual] = Console.ReadLine().ToLower().Trim();
+                Console.Write("CEP: ");
+                ceps[atual] = Convert.ToInt32(Console.ReadLine());
+                Console.Write("Quantidade de Funcionários: ");
+                quantidadeFuncionarios[atual] = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Horário para entrega: ");
+                horariosEntrega[atual] = Convert.ToDouble(Console.ReadLine());
+            }
+            else
+            {
+                Console.WriteLine("Registro não encontrado");
+
+            }
+        }
+
     }
 }

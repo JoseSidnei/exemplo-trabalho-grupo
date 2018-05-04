@@ -70,5 +70,32 @@ namespace NossaAplicacao
                 Console.WriteLine("Nome não encontrado");
             }
         }
+
+        internal void EditarProdutos()
+        {
+            Console.WriteLine("Digite o nome para busca: ");
+            string nomeProdutoBuscado = Console.ReadLine();
+            bool achou = false;
+            for (int i = 0; i < atual; i++)
+            {
+                if (nomeProdutoBuscado == nomeProduto[i])
+                {
+                    Console.WriteLine(
+                        String.Format(
+                            "\nNome: {0} \nTipo: {1} \nQuantidade de Produtos: {2} \nValidade: {3} \nValor: {4}",
+                       tiposDeProdutos[i], nomeProduto[i], quantidadeProdutos[i], validade[i], valores[i]
+
+                        )
+                    );
+                    achou = true;
+                    break;
+                }
+            }
+            if (!achou)
+            {
+                Console.WriteLine("Nome não encontrado");
+            }
+        }
+
     }
 }
