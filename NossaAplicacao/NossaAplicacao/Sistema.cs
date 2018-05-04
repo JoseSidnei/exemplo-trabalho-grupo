@@ -9,6 +9,7 @@ namespace NossaAplicacao
     class Sistema
     {
         CadastroPessoaFisica cadastroDePessoasFisica = new CadastroPessoaFisica();
+        CadastroFuncionariosDoRestaurante cadastroDeFuncionarios = new CadastroFuncionariosDoRestaurante();
           
         public Sistema()
         {
@@ -22,14 +23,16 @@ namespace NossaAplicacao
 2 - Cadastro de pessoa Jurídica
 3 - Produtos
 4 - Cadastro Funcionarios do Restaurante 
-5 - Sair");
+5 - 
+6 - 
+7 - Sair");
         }
         public void GeriMenu()
         {
 
             Menu();
             int menuEscolha = Convert.ToInt32(Console.ReadLine());
-            while (menuEscolha != 5)
+            while (menuEscolha != 7)
             {
                 switch (menuEscolha)
                 {
@@ -37,14 +40,21 @@ namespace NossaAplicacao
                         cadastroDePessoasFisica.CadastroDePessoas();
                         break;
                     case 2:
-
+                        
                         break;
                     case 3:
 
                         break;
                     case 4:
+                        cadastroDeFuncionarios.CadastroFuncionarios();
+                        break;
+                    case 5:
 
                         break;
+                    case 6:
+
+                        break;
+
                 }
                 Menu();
                 menuEscolha = Convert.ToInt32(Console.ReadLine());

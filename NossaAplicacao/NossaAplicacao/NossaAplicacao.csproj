@@ -41,7 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CadastroFuncionariosDoRestaurante.cs" />
     <Compile Include="CadastroPessoaFisica.cs" />
+    <Compile Include="ListarCadastros.cs" />
     <Compile Include="Sistema.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
