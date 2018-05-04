@@ -29,19 +29,37 @@ namespace NossaAplicacao
             telefones[atual] = Convert.ToInt32(Console.ReadLine());
             Console.Write("Email: ");
             emails[atual] = Console.ReadLine().ToLower().Trim();
-            Console.Write("Cidade: ");
-            cidades[atual] = Console.ReadLine().ToLower().Trim();
             Console.Write("Ebdereço: ");
             enderecos[atual] = Console.ReadLine().ToLower().Trim();
+            Console.Write("Cidade: ");
+            cidades[atual] = Console.ReadLine().ToLower().Trim();
             Console.Write("Nº: ");
             numeros[atual] = Convert.ToInt32(Console.ReadLine());
             Console.Write("Bairro: ");
             bairros[atual] = Console.ReadLine().ToLower().Trim();
             Console.Write("CEP: ");
             ceps[atual] = Convert.ToInt32(Console.ReadLine());
-            Console.Write("Quantidade de funcionarios: ");
+            Console.Write("Quantidade de Funcionários: ");
             quantidadeFuncionarios[atual] = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Horário para entrega: ");
             horariosEntrega[atual] = Convert.ToDouble(Console.ReadLine());
+        }
+
+        public void ListarBarcos()
+        {
+            Console.Clear();
+            Console.WriteLine("Lista de pessoas Jurídicas cadastradas ");
+            for (int i = 0; i < atual; i++)
+            {
+                Console.WriteLine(
+                    String.Format(
+                        "\nNome da Empresa:: {0} \nTelefone para Contato: {1} \nEmail: {2} \nEndereço: {3} \nCidade: {4} \nN°: {5}" +  
+                       "\nBairro: {6} \nCEP: {7} \nQuantidade de Funcionários: {8} \nHorário para Entrega: {8}",
+                       nomesEmpresa[i], telefones[i], emails[i], enderecos[i], cidades[i], numeros[i], numeros[i], bairros[i], ceps[i],
+                       quantidadeFuncionarios[i], horariosEntrega[i]
+                        )
+                    );
+            }
+        }
     }
 }
