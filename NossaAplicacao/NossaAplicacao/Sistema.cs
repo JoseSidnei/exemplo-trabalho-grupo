@@ -8,9 +8,8 @@ namespace NossaAplicacao
 {
     class Sistema
     {
-          class Sistema
-    {
-        
+        CadastroPessoaFisica cadastroDePessoasFisica = new CadastroPessoaFisica();
+          
         public Sistema()
         {
             GeriMenu();
@@ -35,7 +34,7 @@ namespace NossaAplicacao
                 switch (menuEscolha)
                 {
                     case 1:
-
+                        cadastroDePessoasFisica.CadastroDePessoas();
                         break;
                     case 2:
 
@@ -62,4 +61,4 @@ namespace NossaAplicacao
 
       }
    }
-}
+

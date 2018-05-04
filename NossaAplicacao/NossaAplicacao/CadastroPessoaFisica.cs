@@ -19,6 +19,27 @@ namespace NossaAplicacao
      string[] email = new string[100];
      int atual = 0;
 
+        public void CadastroDePessoas()
+        {
+            Console.Clear();
+            Console.Write("Nome : ");
+            nomesPessoa[atual] = Console.ReadLine();
+            Console.Write("Nº: ");
+            numeroCasa[atual] = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Idade: ");
+            idade[atual] = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Cidade: ");
+            cidade[atual] = Console.ReadLine();
+            Console.Write("Cep: ");
+            cep[atual] = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Bairro: ");
+            bairro[atual] = Console.ReadLine();
+            Console.Write("Rua: ");
+            rua[atual] = Console.ReadLine();
+            Console.Write("E-mail: ");
+            email[atual] = Console.ReadLine();
+            atual++;
+        }
 
     }
 
