@@ -9,6 +9,7 @@ namespace NossaAplicacao
     class Sistema
     {
         CadastroPessoaFisica cadastroDePessoasFisica = new CadastroPessoaFisica();
+        CadastroPessoaJuridica cadastroPessoaJuridica = new CadastroPessoaJuridica();
         CadastroFuncionariosDoRestaurante cadastroDeFuncionarios = new CadastroFuncionariosDoRestaurante();
           
         public Sistema()
@@ -41,7 +42,7 @@ namespace NossaAplicacao
                         cadastroDePessoasFisica.CadastroDePessoas();
                         break;
                     case 2:
-                        
+                        cadastroPessoaJuridica.CadastroPessoaJuridica();
                         break;
                     case 3:
 
