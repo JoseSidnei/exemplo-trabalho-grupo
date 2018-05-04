@@ -20,7 +20,7 @@ namespace NossaAplicacao
         double[] horariosEntrega = new double[100];
         int atual = 0;
 
-        public void CadastroPessoaJuridica()
+        public void PessoaJuridica()
         {
             Console.Clear();
             Console.Write("Nome da empresa: ");

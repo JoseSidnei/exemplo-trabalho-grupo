@@ -16,7 +16,7 @@ namespace NossaAplicacao
         double[] valores = new double[100];
         int atual = 0;
 
-        public void CadastrarProdutos()
+        public void Produtos()
         {
             Console.Write("Nome do Produto: ");
             nomeProduto[atual] = Console.ReadLine().ToLower().Trim();

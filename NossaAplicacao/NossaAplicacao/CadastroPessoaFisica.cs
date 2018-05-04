@@ -79,6 +79,49 @@ namespace NossaAplicacao
                 Console.WriteLine("Nome não encontrado");
             }
        }
+                     
+       public void EditarFisica()
+       {
+            Console.Clear();
+            Console.WriteLine("Digite um nome para pesquisa");
+            string nomePesquisado = Console.ReadLine().ToLower().Trim();
+            int posicao = -1;
+            for (int i = 0; i < atual; i++)
+            {
+                if (nomePesquisado == nomesPessoa[i])
+                {
+                    posicao = i;
+                }
+            }
+
+            if (posicao != -1)
+            {
+                
+            Console.Clear();
+            Console.Write("Nome : ");
+            nomesPessoa[atual] = Console.ReadLine();
+            Console.Write("Nº: ");
+            numeroCasa[atual] = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Idade: ");
+            idade[atual] = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Cidade: ");
+            cidade[atual] = Console.ReadLine();
+            Console.Write("Cep: ");
+            cep[atual] = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Bairro: ");
+            bairro[atual] = Console.ReadLine();
+            Console.Write("Rua: ");
+            rua[atual] = Console.ReadLine();
+            Console.Write("E-mail: ");
+            email[atual] = Console.ReadLine();
+            Console.WriteLine("Dados alterados com sucesso");
+            }
+            else
+            {
+                Console.WriteLine("Registro não encontrado");
+                
+            }
+        }
     }
 }
 

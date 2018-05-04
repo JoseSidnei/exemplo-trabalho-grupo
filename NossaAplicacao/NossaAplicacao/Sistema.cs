@@ -35,8 +35,8 @@ namespace NossaAplicacao
 10 - Buscar cadastro Pessoa jurídica
 11 - Buscar Produtos
 12 - Buscar Cadastro Funcionários
-13 - Editarcadastro Pessoa Física
-14 - Editar cadastro Pessoa jurídica
+13 - Editar Cadastro Pessoa Física
+14 - Editar Cadastro Pessoa jurídica
 15 - Editar Produtos
 16 - Editar Cadastro Funcionários
 17 - Sair");
@@ -54,10 +54,10 @@ namespace NossaAplicacao
                         cadastroDePessoasFisica.CadastroDePessoas();
                         break;
                     case 2:
-                        cacadastrarPessoaJuridica.CadastroPessoaJuridica();
+                        cacadastrarPessoaJuridica.PessoaJuridica();
                         break;
                     case 3:
-                        cadatrarProdutos.CadastrarProdutos();
+                        cadatrarProdutos.Produtos();
                         break;
                     case 4:
                         cadastroDeFuncionarios.CadastroFuncionarios();
@@ -87,7 +87,7 @@ namespace NossaAplicacao
                         cadastroDeFuncionarios.NomeBuscarFuncionario();
                         break;
                     case 13:
-                        
+                        cadastroDePessoasFisica.EditarFisica();
                         break;
                     case 14:
                         cacadastrarPessoaJuridica.EditarPessoaJuridica();
@@ -96,7 +96,7 @@ namespace NossaAplicacao
                         cadatrarProdutos.EditarProdutos();
                         break;
                     case 16:
-                        
+                        cadastroDeFuncionarios.EditarFuncionarios();
                         break;
                     
 
