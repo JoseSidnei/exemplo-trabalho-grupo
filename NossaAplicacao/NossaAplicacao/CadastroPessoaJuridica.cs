@@ -17,7 +17,7 @@ namespace NossaAplicacao
         string[] bairros = new string[100];
         int[] ceps = new int[100];
         int[] quantidadeFuncionarios = new int[100];
-        double[] horariosEntrega = new double[100];
+        string[] horariosEntrega = new string[100];
         int atual = 0;
 
         public void PessoaJuridica()
@@ -41,8 +41,8 @@ namespace NossaAplicacao
             ceps[atual] = Convert.ToInt32(Console.ReadLine());
             Console.Write("Quantidade de Funcionários: ");
             quantidadeFuncionarios[atual] = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Horário para entrega: ");
-            horariosEntrega[atual] = Convert.ToDouble(Console.ReadLine());
+            Console.Write("Horário para entrega: ");
+            horariosEntrega[atual] =Console.ReadLine();
         }
 
         public void ListarPessoaJuridica()
@@ -126,7 +126,7 @@ namespace NossaAplicacao
                 Console.Write("Quantidade de Funcionários: ");
                 quantidadeFuncionarios[atual] = Convert.ToInt32(Console.ReadLine());
                 Console.WriteLine("Horário para entrega: ");
-                horariosEntrega[atual] = Convert.ToDouble(Console.ReadLine());
+                horariosEntrega[atual] = Console.ReadLine();
             }
             else
             {
