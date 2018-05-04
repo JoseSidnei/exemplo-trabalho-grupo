@@ -18,10 +18,10 @@ namespace NossaAplicacao
 
         public void CadastrarProdutos()
         {
-            Console.Write("Tipo: ");
-            tiposDeProdutos[atual] = Console.ReadLine().ToLower().Trim();
             Console.Write("Nome do Produto: ");
             nomeProduto[atual] = Console.ReadLine().ToLower().Trim();
+            Console.Write("Tipo: ");
+            tiposDeProdutos[atual] = Console.ReadLine().ToLower().Trim();
             Console.Write("Quantidade de Produtos: ");
             quantidadeProdutos[atual] = Convert.ToInt32(Console.ReadLine());
             Console.Write("Validade: ");
@@ -38,12 +38,37 @@ namespace NossaAplicacao
             {
                 Console.WriteLine(
                     String.Format(
-                        "\nTipo: {0} \nNome do Produto: {1} \nQuantidade de Produtos: {2} \nValidade: {3} \nValor: {4}",
+                        "\nNome: {0} \nTipo: {1} \nQuantidade de Produtos: {2} \nValidade: {3} \nValor: {4}",
                        tiposDeProdutos[i], nomeProduto[i], quantidadeProdutos[i], validade[i], valores[i]
                         )
                     );
             }
         }
 
+        internal void BuscarProduto()
+        {
+            Console.Write("Digite o nome para busca: ");
+            string nomeProdutoBuscado = Console.ReadLine();
+            bool achou = false;
+            for (int i = 0; i < atual; i++)
+            {
+                if (nomeProdutoBuscado == nomeProduto[i])
+                {
+                    Console.WriteLine(
+                        String.Format(
+                              "\nNome: {0} \nTipo: {1} \nQuantidade de Produtos: {2} \nValidade: {3} \nValor: {4}",
+                       tiposDeProdutos[i], nomeProduto[i], quantidadeProdutos[i], validade[i], valores[i]
+
+                        )
+                    );
+                    achou = true;
+                    break;
+                }
+            }
+            if (!achou)
+            {
+                Console.WriteLine("Nome não encontrado");
+            }
+        }
     }
 }
