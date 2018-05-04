@@ -71,7 +71,7 @@ namespace NossaAplicacao
                         cacadastrarPessoaJuridica.ListarPessoaJuridica();
                         break;
                     case 9:
-
+                        cadastroDePessoasFisica.NomeBuscar();
                         break;
                     case 10:
                         cacadastrarPessoaJuridica.BuscarPessoaJuridica();
@@ -80,7 +80,7 @@ namespace NossaAplicacao
                         cadatrarProdutos.BuscarProduto();
                         break;
                     case 12:
-
+                        cadastroDeFuncionarios.NomeBuscarFuncionario();
                         break;
                     
 

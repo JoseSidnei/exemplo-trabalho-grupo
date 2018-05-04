@@ -52,7 +52,32 @@ namespace NossaAplicacao
                        nomesPessoa[i], numeroCasa[i], idade[i], cidade[i], cep[i], bairro[i], rua[i], email[i]
                        )
                    );
-           }                              
+           }
+        }
+
+        internal void NomeBuscar()
+        {
+            Console.WriteLine("Digite o nome para busca: ");
+            string nomeBuscado = Console.ReadLine();
+            bool achou = false;
+            for (int i = 0; i < atual; i++)
+            {
+                if (nomeBuscado == nomesPessoa[i])
+                {
+                    Console.WriteLine(
+                        String.Format(
+                       "\nNome: {0} \nNº: {1} \nIdade: {2} \nCidade: {3} \nCep: {4} \nBairro: {5} \nRua: {6} \nE-mail: {7}",
+                       nomesPessoa[i], numeroCasa[i], idade[i], cidade[i], cep[i], bairro[i], rua[i], email[i]
+                       )
+                   );
+                    achou = true;
+                    break;
+                }
+            }
+            if (!achou)
+            {
+                Console.WriteLine("Nome não encontrado");
+            }
        }
     }
 }

@@ -41,6 +41,32 @@ namespace NossaAplicacao
                     );
             }
         }
+
+        internal void NomeBuscarFuncionario()
+        {
+            Console.WriteLine("Digite o nome para busca: ");
+            string nomeBuscado = Console.ReadLine();
+            bool achou = false;
+            for (int i = 0; i < atual; i++)
+            {
+                if (nomeBuscado == nomeFuncionario[i])
+                {
+                    Console.WriteLine(
+                        String.Format(
+                       "\nNome Funcionarios: {0} \nCodigo De Acesso: {1} \nSetor Que Trabalha: {2} \nTurno Que Trabalha: {3}",
+                       nomeFuncionario[i], codigoDeAcesso[i], SetorQueTrabalha[i], TurnoQueTrabalha[i]
+                       )
+                   );
+                    achou = true;
+                    break;
+                }
+            }
+            if (!achou)
+            {
+                Console.WriteLine("Nome não encontrado");
+            }
+
+        }
     }
  }
     
