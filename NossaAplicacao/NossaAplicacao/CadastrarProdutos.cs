@@ -38,7 +38,7 @@ namespace NossaAplicacao
             {
                 Console.WriteLine(
                     String.Format(
-                        "\nNome: {0} \nTipo: {1} \nQuantidade de Produtos: {2} \nValidade: {3} \nValor: {4}",
+                        "\nNome: {0} \nTipo: {1} \nQuantidade de Produtos: {2} \nValidade: {3} \nValor: R$ {4}",
                        tiposDeProdutos[i], nomeProduto[i], quantidadeProdutos[i], validade[i], valores[i]
                         )
                     );
@@ -56,7 +56,7 @@ namespace NossaAplicacao
                 {
                     Console.WriteLine(
                         String.Format(
-                              "\nNome: {0} \nTipo: {1} \nQuantidade de Produtos: {2} \nValidade: {3} \nValor: {4}",
+                              "\nNome: {0} \nTipo: {1} \nQuantidade de Produtos: {2} \nValidade: {3} \nValor: R$ {4}",
                        tiposDeProdutos[i], nomeProduto[i], quantidadeProdutos[i], validade[i], valores[i]
 
                         )
@@ -82,7 +82,7 @@ namespace NossaAplicacao
                 {
                     Console.WriteLine(
                         String.Format(
-                            "\nNome: {0} \nTipo: {1} \nQuantidade de Produtos: {2} \nValidade: {3} \nValor: {4}",
+                            "\nNome: {0} \nTipo: {1} \nQuantidade de Produtos: {2} \nValidade: {3} \nValor: R$ {4}",
                        tiposDeProdutos[i], nomeProduto[i], quantidadeProdutos[i], validade[i], valores[i]
 
                         )
