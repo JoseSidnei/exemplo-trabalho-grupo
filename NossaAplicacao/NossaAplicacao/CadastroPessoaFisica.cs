@@ -8,16 +8,16 @@ namespace NossaAplicacao
 {
     class CadastroPessoaFisica
     {
-     
-     string[] nomesPessoa = new string[100];
-     int[] numeroCasa = new int[100];
-     int[] idade = new int[100];
-     string[] cidade = new string[100];
-     int[] cep = new int[100];
-     string[] bairro = new string[100];
-     string[] rua = new string[100];
-     string[] email = new string[100];
-     int atual = 0;
+
+        string[] nomesPessoa = new string[100];
+        int[] numeroCasa = new int[100];
+        int[] idade = new int[100];
+        string[] cidade = new string[100];
+        int[] cep = new int[100];
+        string[] bairro = new string[100];
+        string[] rua = new string[100];
+        string[] email = new string[100];
+        int atual = 0;
 
         public void CadastroDePessoas()
         {
@@ -40,8 +40,23 @@ namespace NossaAplicacao
             email[atual] = Console.ReadLine();
             atual++;
         }
-
+         public void ListarFisicas()
+       {
+           Console.Clear();
+           Console.WriteLine("Lista de Pessoas Físicas ");
+           for (int i = 0; i < atual; i++)
+           {
+               Console.WriteLine(
+                   String.Format(
+                       "\nNome: {0} \nNº: {1} \nIdade: {2} \nCidade: {3} \nCep: {4} \nBairro: {5} \nRua: {6} \nE-mail: {7}",
+                       nomesPessoa[i], numeroCasa[i], idade[i], cidade[i], cep[i], bairro[i], rua[i], email[i]
+                       )
+                   );
+           }                              
+       }
     }
+}
 
-   }
 
+ 
+    

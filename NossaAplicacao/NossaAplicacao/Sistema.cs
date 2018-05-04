@@ -10,6 +10,7 @@ namespace NossaAplicacao
     {
         CadastroPessoaFisica cadastroDePessoasFisica = new CadastroPessoaFisica();
         CadastroFuncionariosDoRestaurante cadastroDeFuncionarios = new CadastroFuncionariosDoRestaurante();
+        
           
         public Sistema()
         {
@@ -24,7 +25,7 @@ namespace NossaAplicacao
 3 - Produtos
 4 - Cadastro Funcionarios do Restaurante 
 5 - Listar Cadastros de pessoas Físicas
-6 - Listar Cadastros de pessoas Jurídicas
+6 - 
 7 -
 8 - Sair");
         }
@@ -50,7 +51,7 @@ namespace NossaAplicacao
                         cadastroDeFuncionarios.CadastroFuncionarios();
                         break;
                     case 5:
-
+                        cadastroDePessoasFisica.ListarFisicas();
                         break;
                     case 6:
 
