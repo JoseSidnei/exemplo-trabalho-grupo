@@ -57,6 +57,9 @@ namespace NossaAplicacao
                     case 6:
                         cadastroDeFuncionarios.ListarFuncionarios();
                         break;
+                    case 7:
+
+                        break;
 
                 }
                 Menu();
