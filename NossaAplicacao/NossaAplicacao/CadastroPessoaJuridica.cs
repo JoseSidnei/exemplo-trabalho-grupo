@@ -45,7 +45,7 @@ namespace NossaAplicacao
             horariosEntrega[atual] = Convert.ToDouble(Console.ReadLine());
         }
 
-        public void ListarBarcos()
+        public void ListarPessoaJuridica()
         {
             Console.Clear();
             Console.WriteLine("Lista de pessoas Jurídicas cadastradas ");

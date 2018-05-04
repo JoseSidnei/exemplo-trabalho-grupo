@@ -30,7 +30,7 @@ namespace NossaAplicacao
             valores[atual] = Convert.ToDouble(Console.ReadLine());            
         }
 
-        public void ListarBarcos()
+        public void ListarProdutos()
         {
             Console.Clear();
             Console.WriteLine("Lista de Produtos ");
