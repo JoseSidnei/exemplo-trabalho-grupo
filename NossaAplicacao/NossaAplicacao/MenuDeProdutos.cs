@@ -16,6 +16,7 @@ namespace NossaAplicacao
         double[] valores = new double[100];
         double somaDoValorProdutos = 0;
         int atual = 0;
+        double maiorValor = 0, menorValor = 100000000000000;
 
 
         public void Produtos()
@@ -107,29 +108,52 @@ namespace NossaAplicacao
         {
             Console.Clear();
 
-            
+
             for (int i = 0; i < valores.Length; i++)
             {
-                somaDoValorProdutos = valores[i] +somaDoValorProdutos;
+                somaDoValorProdutos = valores[i] + somaDoValorProdutos;
             }
 
             Console.WriteLine("Valor Total dos Produtos: R$ " + somaDoValorProdutos);
+
 
         }
 
         public void MediaDosValoresDosProdutos()
         {
+            for (int i = 0; i < valores.Length; i++)
+            {
+                somaDoValorProdutos = somaDoValorProdutos / valores.Length;
+            }
+
+            Console.WriteLine("Média do Total dos Produtos: R$ " + somaDoValorProdutos);
 
         }
 
         public void MaiorValorDeProdutos()
         {
+            for (int i = 0; i < valores.Length; i++)
+            {
+                if (valores.Length > maiorValor)
+                {
+                    maiorValor = valores[atual];
+                }
 
+                Console.WriteLine("Produto com Maior Valor: " + nomeProduto[atual] + "Valor do Produto: " + valores[atual]);
+            }
         }
 
         public void MenorValorDeProdutos()
         {
+            for (int i = 0; i < valores.Length; i++)
+            {
+                if (valores.Length < menorValor)
+                {
+                    menorValor = valores[atual];
+                }
 
+                Console.WriteLine("Produto com Menor Valor: " + nomeProduto[atual] + "Valor do Produto: " + valores[atual]);
+            }
         }
 
     }

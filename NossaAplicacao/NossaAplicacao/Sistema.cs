@@ -190,19 +190,16 @@ namespace NossaAplicacao
                                 menuProdutos.BuscarProduto  ();
                                 break;
                             case 5:
-                                menuProdutos.TotalDosValoresDosProdutos();
+                                menuProdutos.TotalDosValoresDosProdutos();                           
                                 break;
                             case 6:
-                                //  Média dos Valores dos Produtos
+                                menuProdutos.MediaDosValoresDosProdutos();
                                 break;
                             case 7:
-                                // Produto com Maior Valor
+                                menuProdutos.MaiorValorDeProdutos();
                                 break;
                             case 8:
-                                // Produto com Menor Valor
-                                break;
-                            case 9:
-                                Console.Clear();
+                                menuProdutos.MenorValorDeProdutos();
                                 break;
 
 
