@@ -34,7 +34,7 @@ namespace NossaAplicacao
 
         }
 
-        /*A partir daki tudo que vc fazer tem que ser dentro do primeiro switch */
+        
 
         public void GerirMenu()
         {
@@ -98,11 +98,63 @@ namespace NossaAplicacao
 
                         }
 
-                        /*Já deixei separado onde vc tem que fazer o seu dmr so faz como eu fiz ali que é gg  pode apagar esse comentario i*/
+                        
 
                         break;
                     case 2:
                         Console.Clear();
+                        Console.WriteLine(@"
+1 - Cadastrar Pessoas Físicas
+2 - Editar Pessoas Físicas
+3 - Listar Pessoas Físicas
+4 - Buscar Pessoas Físicas 
+5 - Total Das Idades de Pessoas Físicas
+6 - Média Das Idades de Pessoas Físicas
+7 - Pessoa Física Com Maior Idade
+8 - Pessoa Física Com Menor Idade
+9 - Sair");
+                        escolhaMenu = Convert.ToInt32(Console.ReadLine());
+                        Console.Clear();
+
+
+                        switch (escolhaMenu)
+                        {
+
+                            case 1:
+                                cadastroDePessoasFisica.CadastroDePessoas();
+                                break;
+                            case 2:
+                                cadastroDePessoasFisica.EditarFisica();
+                                break;
+                            case 3:
+                                cadastroDePessoasFisica.ListarFisicas();
+                                break;
+                            case 4:
+                                cadastroDePessoasFisica.NomeBuscar();
+                                break;
+                            case 5:
+                                
+                                break;
+                            case 6:
+                                
+                                break;
+                            case 7:
+                                
+                                break;
+                            case 8:
+                                
+                                break;
+                            case 9:
+                                Console.Clear();
+                                break;
+
+
+
+
+
+
+
+                        }
 
 
                         break;
@@ -161,10 +213,62 @@ namespace NossaAplicacao
 
                         }
 
-                        /*Já deixei separado onde vc tem que fazer o seu dmr so faz como eu fiz ali que é gg  pode apagar esse comentario i*/
+                        
                         break;
                     case 4:
                         Console.Clear();
+                        Console.WriteLine(@"
+1 - Cadastrar Funcionarios
+2 - Editar Funcionarios
+3 - Listar Funcionarios
+4 - Buscar Funcionarios
+5 - Total Dos Codigos Dos Funcionarios
+6 - Média Dos Codigos Dos Funcionarios
+7 - Funcionario Com Maior Codigo
+8 - Funcionario Com Menor Codigo
+9 - Sair");
+                        escolhaMenu = Convert.ToInt32(Console.ReadLine());
+                        Console.Clear();
+
+
+                        switch (escolhaMenu)
+                        {
+
+                            case 1:
+                                cadastroDeFuncionarios.CadastroFuncionarios();
+                                break;
+                            case 2:
+                                cadastroDeFuncionarios.EditarFuncionarios();
+                                break;
+                            case 3:
+                                cadastroDeFuncionarios.ListarFuncionarios();
+                                break;
+                            case 4:
+                                cadastroDeFuncionarios.NomeBuscarFuncionario();
+                                break;
+                            case 5:
+
+                                break;
+                            case 6:
+
+                                break;
+                            case 7:
+
+                                break;
+                            case 8:
+
+                                break;
+                            case 9:
+                                Console.Clear();
+                                break;
+
+
+
+
+
+
+
+                        }
 
                         break;
 
