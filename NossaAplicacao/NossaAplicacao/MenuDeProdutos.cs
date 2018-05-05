@@ -16,7 +16,7 @@ namespace NossaAplicacao
         double[] valores = new double[100];
         double somaDoValorProdutos = 0;
         int atual = 0;
-        double maiorValor = 0, menorValor = 100000000000000;
+        double maiorValor = 0, menorValor = 100000000000000, mediaValor = 0;
 
 
         public void Produtos()
@@ -104,6 +104,7 @@ namespace NossaAplicacao
                     validade[atual] = Console.ReadLine();
                     Console.Write("Valor: ");
                     valores[atual] = Convert.ToDouble(Console.ReadLine());
+                    Console.WriteLine();
                     Console.WriteLine("Dados alterados com sucesso");
                  }
                  else
@@ -134,10 +135,11 @@ namespace NossaAplicacao
         {
             for (int i = 0; i < valores.Length; i++)
             {
-                somaDoValorProdutos = somaDoValorProdutos / valores.Length;
+               mediaValor  = somaDoValorProdutos / atual;
             }
 
-            Console.WriteLine("Média do Total dos Produtos: R$ " + somaDoValorProdutos);
+            Console.WriteLine("Média do Total dos Produtos: R$ " + mediaValor);
+            
 
         }
 
@@ -164,6 +166,7 @@ namespace NossaAplicacao
                 }
 
                 Console.WriteLine("Produto com Menor Valor: " + nomeProduto[atual] + "Valor do Produto: " + valores[atual]);
+                Console.WriteLine();
             }
         }
 
