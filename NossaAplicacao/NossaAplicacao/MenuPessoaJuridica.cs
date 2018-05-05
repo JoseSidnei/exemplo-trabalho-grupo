@@ -39,6 +39,8 @@ namespace NossaAplicacao
             bairros[atual] = Console.ReadLine().ToLower().Trim();           
             Console.Write("CEP: ");
             ceps[atual] = Console.ReadLine();
+            Console.Write("Quantidade de Funcionários: ");
+            quantidadeFuncionarios[atual] = Convert.ToInt32(Console.ReadLine());
             Console.Write("Horário para entrega: ");
             horariosEntrega[atual] = Console.ReadLine();
             atual++;
