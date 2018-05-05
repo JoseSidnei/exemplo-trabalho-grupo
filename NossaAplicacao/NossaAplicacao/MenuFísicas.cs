@@ -148,6 +148,17 @@ namespace NossaAplicacao
             Console.WriteLine("Média Das Idades das pessoas Físicas: " + somaDasIdades);
 
         }
+
+        public void MaiorIdade()
+        {
+
+        }
+
+        public void Menoridade()
+        {
+
+
+        }
     }
 }
 

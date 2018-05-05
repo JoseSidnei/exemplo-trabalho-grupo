@@ -163,7 +163,7 @@ namespace NossaAplicacao
                         Console.WriteLine(@"
 1 - Cadastrar Produto
 2 - Editar Pruduto
-3 - Listar Procuto
+3 - Listar Produto
 4 - Buscar Produto 
 5 - Total Dos Valores Dos Produtos
 6 - Média Dos Valores Dos Produtos
