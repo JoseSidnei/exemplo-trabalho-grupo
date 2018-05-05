@@ -165,6 +165,7 @@ namespace NossaAplicacao
                         break;
                     case 4:
                         Console.Clear();
+
                         break;
 
 
