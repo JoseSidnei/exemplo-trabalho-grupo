@@ -110,6 +110,7 @@ namespace NossaAplicacao
                  else
                  {
                      Console.WriteLine("Registro não encontrado");
+                    Console.WriteLine();
 
                  }
 
@@ -126,8 +127,9 @@ namespace NossaAplicacao
                 somaDoValorProdutos = valores[i] + somaDoValorProdutos;
             }
 
-            Console.WriteLine("Valor Total dos Produtos: R$ " + somaDoValorProdutos);
 
+            Console.WriteLine("Valor Total dos Produtos: R$ " + somaDoValorProdutos);
+            Console.WriteLine();
 
         }
 
@@ -139,6 +141,7 @@ namespace NossaAplicacao
             }
 
             Console.WriteLine("Média do Total dos Produtos: R$ " + mediaValor);
+            Console.WriteLine();
             
 
         }
@@ -154,7 +157,8 @@ namespace NossaAplicacao
 
             }
 
-            Console.WriteLine(" Valor do Produto: R$ " + maiorValor + " Produto com Maior Valor: " + nomeProduto[atual]);
+            Console.WriteLine("Produto com Maior Valor: " + nomeProduto[atual] + " Valor do Produto: R$ " + maiorValor);
+            Console.WriteLine();
         }
 
         public void MenorValorDeProdutos()
@@ -168,9 +172,9 @@ namespace NossaAplicacao
                     menorValor = valores[i];
                 }
 
-                Console.Write("Produto com Menor Valor: " + nomeProduto[i] + "Valor do Produto: " + valores[i]);
-                Console.WriteLine();
             }
+                Console.Write("Produto com Menor Valor: " + nomeProduto[atual] + "Valor do Produto: " + menorValor);
+                Console.WriteLine();
         }
 
     }
