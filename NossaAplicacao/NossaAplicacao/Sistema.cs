@@ -60,6 +60,7 @@ namespace NossaAplicacao
 10 - Sair");
 
                         escolhaMenu = Convert.ToInt32(Console.ReadLine());
+                        Console.Clear();
 
 
                         switch (escolhaMenu)
@@ -117,8 +118,8 @@ namespace NossaAplicacao
 7 - Produto Com Maior Valor
 8 - Produto Com Menor Valor
 9 - Sair");
-
                         escolhaMenu = Convert.ToInt32(Console.ReadLine());
+                        Console.Clear();
 
 
                         switch (escolhaMenu)
