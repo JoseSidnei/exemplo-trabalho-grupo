@@ -49,10 +49,10 @@ namespace NossaAplicacao
                     case 1:
                         Console.Clear();
                         Console.WriteLine(@"
-1 - Cadastrar Pessoa Juídica
-2 - Editar Pessoa Jurídica
-3 - Listar Pessoa Jurídica
-4 - Buscar Pessoa Jurídica
+1 - Cadastrar 
+2 - Editar 
+3 - Listar
+4 - Buscar 
 5 - Total De Funcionários
 6 - Média De Funcionários
 7 - Cadastro Com Maior Nome De Empresa
@@ -104,10 +104,10 @@ namespace NossaAplicacao
                     case 2:
                         Console.Clear();
                         Console.WriteLine(@"
-1 - Cadastrar Pessoas Físicas
-2 - Editar Pessoas Físicas
-3 - Listar Pessoas Físicas
-4 - Buscar Pessoas Físicas 
+1 - Cadastrar 
+2 - Editar 
+3 - Listar 
+4 - Buscar  
 5 - Total Das Idades de Pessoas Físicas
 6 - Média Das Idades de Pessoas Físicas
 7 - Pessoa Física Com Maior Idade
@@ -161,10 +161,10 @@ namespace NossaAplicacao
                     case 3:
                         Console.Clear();
                         Console.WriteLine(@"
-1 - Cadastrar Produto
-2 - Editar Pruduto
-3 - Listar Produto
-4 - Buscar Produto 
+1 - Cadastrar 
+2 - Editar 
+3 - Listar 
+4 - Buscar 
 5 - Total Dos Valores Dos Produtos
 6 - Média Dos Valores Dos Produtos
 7 - Produto Com Maior Valor
@@ -215,10 +215,10 @@ namespace NossaAplicacao
                     case 4:
                         Console.Clear();
                         Console.WriteLine(@"
-1 - Cadastrar Funcionário
-2 - Editar Funcionário
-3 - Listar Funcionário
-4 - Buscar Funcionário
+1 - Cadastrar
+2 - Editar 
+3 - Listar 
+4 - Buscar 
 5 - Total Dos Codigos Dos Funcionário
 6 - Média Dos Codigos Dos Funcionário
 7 - Funcionario Com Maior Código 
