@@ -41,10 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CadastrarProdutos.cs" />
+    <Compile Include="MenuDeProdutos.cs" />
     <Compile Include="CadastroFuncionariosDoRestaurante.cs" />
     <Compile Include="CadastroPessoaFisica.cs" />
-    <Compile Include="CadastroPessoaJuridica.cs" />
+    <Compile Include="MenuPessoaJuridica.cs" />
     <Compile Include="Sistema.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

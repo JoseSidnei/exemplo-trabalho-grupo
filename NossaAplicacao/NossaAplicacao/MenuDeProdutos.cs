@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace NossaAplicacao
 {
-    class CadastrarProdutos
+    class MenuDeProdutos
     {
         
         string[] tiposDeProdutos = new string[100];
@@ -95,6 +95,27 @@ namespace NossaAplicacao
             {
                 Console.WriteLine("Nome não encontrado");
             }
+        }
+
+        public void totalDosValoresDosProdutos()
+        {
+
+
+        }
+
+        public void mediaDosValoresDosProdutos()
+        {
+
+        }
+
+        public void maiorValorDeProdutos()
+        {
+
+        }
+
+        public void menorValorDeProdutos()
+        {
+
         }
 
     }

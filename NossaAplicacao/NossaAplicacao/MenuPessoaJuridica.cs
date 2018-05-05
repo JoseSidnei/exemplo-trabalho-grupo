@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace NossaAplicacao
 {
-    class CadastroPessoaJuridica
+    class MenuPessoaJuridica
     {
         string[] nomesEmpresa = new string[100];
         int[] telefones = new int[100];
@@ -20,7 +20,7 @@ namespace NossaAplicacao
         string[] horariosEntrega = new string[100];
         int atual = 0;
 
-        public void PessoaJuridica()
+        public void CadastrarPessoaJuridica()
         {
             Console.Clear();
             Console.Write("Nome da empresa: ");
@@ -42,7 +42,7 @@ namespace NossaAplicacao
             Console.Write("Quantidade de Funcionários: ");
             quantidadeFuncionarios[atual] = Convert.ToInt32(Console.ReadLine());
             Console.Write("Horário para entrega: ");
-            horariosEntrega[atual] =Console.ReadLine();
+            horariosEntrega[atual] = Console.ReadLine();
         }
 
         public void ListarPessoaJuridica()
@@ -53,7 +53,7 @@ namespace NossaAplicacao
             {
                 Console.WriteLine(
                     String.Format(
-                        "\nNome da Empresa:: {0} \nTelefone para Contato: {1} \nEmail: {2} \nEndereço: {3} \nCidade: {4} \nN°: {5}" +  
+                        "\nNome da Empresa:: {0} \nTelefone para Contato: {1} \nEmail: {2} \nEndereço: {3} \nCidade: {4} \nN°: {5}" +
                        "\nBairro: {6} \nCEP: {7} \nQuantidade de Funcionários: {8} \nHorário para Entrega: {8}",
                        nomesEmpresa[i], telefones[i], emails[i], enderecos[i], cidades[i], numeros[i], numeros[i], bairros[i], ceps[i],
                        quantidadeFuncionarios[i], horariosEntrega[i]
@@ -135,5 +135,8 @@ namespace NossaAplicacao
             }
         }
 
+       
+
+       
     }
 }
