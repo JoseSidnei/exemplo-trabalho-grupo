@@ -18,8 +18,8 @@ namespace NossaAplicacao
         int[] quantidadeFuncionarios = new int[100];
         string[] horariosEntrega = new string[100];
         double somaQuantidadeFuncionarios = 0, mediaDeFuncionarios = 0;        
-        string maiorNome = "";
-        string menorNome = "ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo";
+        string maiorNomeJuridico = "";
+        string menorNomeJuridico = "ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo";
         int atual = 0;
 
         public void CadastrarPessoaJuridica()
@@ -160,26 +160,26 @@ namespace NossaAplicacao
         {
             for (int i = 0; i < atual; i++)
             {
-                if (nomesEmpresa.Length > maiorNome.Length)
+                if (nomesEmpresa[i].Length > maiorNomeJuridico.Length)
                 {
-                    maiorNome = nomesEmpresa[i];
+                    maiorNomeJuridico = nomesEmpresa[i];
                 }
             }
 
-            Console.WriteLine("Empresa com Maior Nome: " + maiorNome);
+            Console.WriteLine("Empresa com Maior Nome: " + maiorNomeJuridico);
         }
 
         public void EmpresaMenorNome()
         {
             for (int i = 0; i < atual; i++)
             {
-                if (nomesEmpresa.Length < menorNome.Length)
+                if (nomesEmpresa[i].Length < menorNomeJuridico.Length)
                 {
-                    menorNome = nomesEmpresa[i];
+                    menorNomeJuridico = nomesEmpresa[i];
                 }
             }
 
-            Console.WriteLine("Empresa com Maior Nome: " + menorNome);
+            Console.WriteLine("Empresa com Maior Nome: " + menorNomeJuridico);
         }
 
     }

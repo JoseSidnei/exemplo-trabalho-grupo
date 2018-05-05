@@ -183,7 +183,7 @@ namespace NossaAplicacao
         {
             for (int i = 0; i < atual; i++)
             {
-                if (nomeProduto.Length > maiorNomeProduto.Length)
+                if (nomeProduto[i].Length > maiorNomeProduto.Length)
                 {
                     maiorNomeProduto = nomeProduto[i];
                 }
@@ -197,7 +197,7 @@ namespace NossaAplicacao
         {
             for (int i = 0; i < atual; i++)
             {
-                if (nomeProduto.Length < menorNomeProduto.Length)
+                if (nomeProduto[i].Length < menorNomeProduto.Length)
                 {
                     menorNomeProduto = nomeProduto[i];
                 }
