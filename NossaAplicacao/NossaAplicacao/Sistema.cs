@@ -210,12 +210,6 @@ namespace NossaAplicacao
                                 menuProdutos.MenorNomeProduto();
                                 break;
 
-
-
-
-
-
-
                         }
 
                         
