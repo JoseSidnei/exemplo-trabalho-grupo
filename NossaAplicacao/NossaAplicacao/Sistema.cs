@@ -28,7 +28,7 @@ namespace NossaAplicacao
 1  - Pessoa Jurídica
 2  - Pessoa Física 
 3  - Produtos
-4  - Funcionarios 
+4  - Funcionários 
 5  - Sair");
 
 
@@ -53,8 +53,8 @@ namespace NossaAplicacao
 2 - Editar Pessoa Jurídica
 3 - Listar Pessoa Jurídica
 4 - Buscar Pessoa Jurídica
-5 - Total De Funcionarios
-6 - Média De Funcionario
+5 - Total De Funcionários
+6 - Média De Funcionários
 7 - Cadastro Com Maior Nome De Empresa
 8 - Cadastro Com Menor Nome De Empresa
 10 - Sair");
@@ -215,14 +215,14 @@ namespace NossaAplicacao
                     case 4:
                         Console.Clear();
                         Console.WriteLine(@"
-1 - Cadastrar Funcionarios
-2 - Editar Funcionarios
-3 - Listar Funcionarios
-4 - Buscar Funcionarios
-5 - Total Dos Codigos Dos Funcionarios
-6 - Média Dos Codigos Dos Funcionarios
-7 - Funcionario Com Maior Codigo
-8 - Funcionario Com Menor Codigo
+1 - Cadastrar Funcionário
+2 - Editar Funcionário
+3 - Listar Funcionário
+4 - Buscar Funcionário
+5 - Total Dos Codigos Dos Funcionário
+6 - Média Dos Codigos Dos Funcionário
+7 - Funcionario Com Maior Código 
+8 - Funcionario Com Menor Código
 9 - Sair");
                         escolhaMenu = Convert.ToInt32(Console.ReadLine());
                         Console.Clear();

@@ -18,9 +18,9 @@ namespace NossaAplicacao
         public void CadastroFuncionarios()
         {
             Console.Clear();
-            Console.Write("Nome Funcionario: ");
+            Console.Write("Nome Do Funcionário: ");
             nomeFuncionario[atual] = Console.ReadLine();
-            Console.Write("CodigoDeAcesso: ");
+            Console.Write("Código De Acesso: ");
             codigoDeAcesso[atual] = Convert.ToInt32(Console.ReadLine());
             Console.Write("Setor Que Trabalha: ");
             SetorQueTrabalha[atual] = Console.ReadLine();
@@ -31,12 +31,12 @@ namespace NossaAplicacao
         public void ListarFuncionarios()
         {
             Console.Clear();
-            Console.WriteLine("Lista Funcionarios ");
+            Console.WriteLine("Lista Funcionário ");
             for (int i = 0; i < atual; i++)
             {
                 Console.WriteLine(
                     String.Format(
-                        "\nNome Funcionarios: {0} \nCodigo De Acesso: {1} \nSetor Que Trabalha: {2} \nTurno Que Trabalha: {3}",
+                        "\nNome Funcionário: {0} \nCódigo De Acesso: {1} \nSetor Que Trabalha: {2} \nTurno Que Trabalha: {3}",
                        nomeFuncionario[i], codigoDeAcesso[i], SetorQueTrabalha[i], TurnoQueTrabalha[i])
                         
                     );
@@ -54,7 +54,7 @@ namespace NossaAplicacao
                 {
                     Console.WriteLine(
                         String.Format(
-                       "\nNome Funcionarios: {0} \nCodigo De Acesso: {1} \nSetor Que Trabalha: {2} \nTurno Que Trabalha: {3}",
+                       "\nNome Funcionário: {0} \nCódigo De Acesso: {1} \nSetor Que Trabalha: {2} \nTurno Que Trabalha: {3}",
                        nomeFuncionario[i], codigoDeAcesso[i], SetorQueTrabalha[i], TurnoQueTrabalha[i]
                        )
                    );
@@ -85,9 +85,9 @@ namespace NossaAplicacao
             {
                 
             Console.Clear();
-            Console.Write("Nome Funcionario: ");
+            Console.Write("Nome Funcionário: ");
             nomeFuncionario[atual] = Console.ReadLine();
-            Console.Write("CodigoDeAcesso: ");
+            Console.Write("Código De Acesso: ");
             codigoDeAcesso[atual] = Convert.ToInt32(Console.ReadLine());
             Console.Write("Setor Que Trabalha: ");
             SetorQueTrabalha[atual] = Console.ReadLine();
@@ -112,7 +112,7 @@ namespace NossaAplicacao
                     maiorCodigo = codigoDeAcesso[atual];
                 }
 
-                Console.WriteLine(" O Maior codigo é: " + codigoDeAcesso[atual] + "Nome do funcionario com Maior codigo: " + nomeFuncionario[atual]);
+                Console.WriteLine(" O Maior Código é: " + codigoDeAcesso[atual] + "Nome do Funcionário com Maior Código: " + nomeFuncionario[atual]);
             }
         }
 
@@ -125,7 +125,7 @@ namespace NossaAplicacao
                     menorCodigo = codigoDeAcesso[atual];
                 }
 
-                Console.WriteLine(" O menor codigo é: " + codigoDeAcesso[atual] + "Nome do funcionario com menor codigo: " + nomeFuncionario[atual]);               
+                Console.WriteLine(" O menor Código é: " + codigoDeAcesso[atual] + "Nome do Funcionário com menor Código: " + nomeFuncionario[atual]);               
             }
         }
 
@@ -139,7 +139,7 @@ namespace NossaAplicacao
                 somaDosCodigos = codigoDeAcesso[i] + somaDosCodigos;
             }
 
-            Console.WriteLine("Soma dos codigos de acesso: " + somaDosCodigos);
+            Console.WriteLine("Soma dos Códigos de acesso: " + somaDosCodigos);
 
 
         }
@@ -151,7 +151,7 @@ namespace NossaAplicacao
                 somaDosCodigos = somaDosCodigos / codigoDeAcesso.Length;
             }
 
-            Console.WriteLine("Média Dos Codigos de acesso: " + somaDosCodigos);
+            Console.WriteLine("Média Dos Códigos de acesso: " + somaDosCodigos);
 
         }
     }
