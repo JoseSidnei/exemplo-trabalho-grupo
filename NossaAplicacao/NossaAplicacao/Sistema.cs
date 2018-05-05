@@ -66,6 +66,7 @@ namespace NossaAplicacao
                         {
 
                             case 1:
+                                Console.Clear();
                                 menuPessoaJuridica.CadastrarPessoaJuridica();
                                 break;
                             case 2:
@@ -100,8 +101,8 @@ namespace NossaAplicacao
 
                         break;
                     case 2:
+                        Console.Clear();
 
-                       
 
                         break;
                     case 3:
@@ -163,7 +164,7 @@ namespace NossaAplicacao
                         /*Já deixei separado onde vc tem que fazer o seu dmr so faz como eu fiz ali que é gg  pode apagar esse comentario i*/
                         break;
                     case 4:
-
+                        Console.Clear();
                         break;
 
 
