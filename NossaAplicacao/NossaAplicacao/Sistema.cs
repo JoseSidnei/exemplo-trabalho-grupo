@@ -129,14 +129,14 @@ namespace NossaAplicacao
                                 menuProdutos.Produtos();
                                 break;
                             case 2:
-                                menuProdutos.ListarProdutos();
+                                menuProdutos.EditarProdutos();
                                 break;
 
                             case 3:
-                                menuProdutos.BuscarProduto  ();
+                                menuProdutos.ListarProdutos();
                                 break;
                             case 4:
-                                menuProdutos.EditarProdutos();
+                                menuProdutos.BuscarProduto  ();
                                 break;
                             case 5:
                                 menuProdutos.TotalDosValoresDosProdutos();

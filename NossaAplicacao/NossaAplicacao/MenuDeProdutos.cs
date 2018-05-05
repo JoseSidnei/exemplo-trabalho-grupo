@@ -11,25 +11,33 @@ namespace NossaAplicacao
         
         string[] tiposDeProdutos = new string[100];
         string[] nomeProduto = new string[100];
-        int[] quantidadeProdutos = new int[100];
+        int[] quantidadeProdutos = new int[100];        
         string[] validade = new string[100];
         double[] valores = new double[100];
         double somaDoValorProdutos = 0;
         int atual = 0;
 
+
         public void Produtos()
         {
-            Console.Write("Nome do Produto: ");
-            nomeProduto[atual] = Console.ReadLine().ToLower().Trim();
-            Console.Write("Tipo: ");
-            tiposDeProdutos[atual] = Console.ReadLine().ToLower().Trim();
-            Console.Write("Quantidade de Produtos: ");
-            quantidadeProdutos[atual] = Convert.ToInt32(Console.ReadLine());
-            Console.Write("Validade: ");
-            validade[atual] = Console.ReadLine();
-            Console.Write("Valor: ");
-            valores[atual] = Convert.ToDouble(Console.ReadLine());
-            atual++;
+            
+
+            for (int i = 0; i < atual; i++)
+            {
+                Console.Write("Nome do Produto: ");
+                nomeProduto[atual] = Console.ReadLine().ToLower().Trim();
+                Console.Write("Tipo: ");
+                tiposDeProdutos[atual] = Console.ReadLine().ToLower().Trim();
+                Console.Write("Quantidade de Produtos: ");
+                quantidadeProdutos[atual] = Convert.ToInt32(Console.ReadLine());
+                Console.Write("Validade: ");
+                validade[atual] = Console.ReadLine();
+                Console.Write("Valor: ");
+                valores[atual] = Convert.ToDouble(Console.ReadLine());
+                atual++;
+                Console.Clear();
+            }
+           
         }
 
         public void ListarProdutos()
