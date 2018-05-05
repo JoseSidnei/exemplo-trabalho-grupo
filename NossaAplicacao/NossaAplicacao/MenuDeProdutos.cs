@@ -80,28 +80,39 @@ namespace NossaAplicacao
 
         internal void EditarProdutos()
         {
-            Console.WriteLine("Digite o nome para busca: ");
-            string nomeProdutoBuscado = Console.ReadLine();
-            bool achou = false;
-            for (int i = 0; i < atual; i++)
-            {
-                if (nomeProdutoBuscado == nomeProduto[i])
-                {
-                    Console.WriteLine(
-                        String.Format(
-                            "\nNome: {0} \nTipo: {1} \nQuantidade de Produtos: {2} \nValidade: {3} \nValor: R$ {4}",
-                       tiposDeProdutos[i], nomeProduto[i], quantidadeProdutos[i], validade[i], valores[i]
+             Console.Clear();
+             Console.Write("Digite um nome para pesquisa : ");
+             string nomePesquisado = Console.ReadLine().ToLower().Trim();
+             int posicao = -1;
+             for (int i = 0; i < atual; i++)
+             {
+                 if (nomePesquisado == nomeProduto[i])
+                 {
+                     posicao = i;
+                 }
 
-                        )
-                    );
-                    achou = true;
-                    break;
-                }
-            }
-            if (!achou)
-            {
-                Console.WriteLine("Nome não encontrado");
-            }
+                 if (posicao != -1)
+                 {
+                     
+                    Console.Write("Nome do Produto: ");
+                    nomeProduto[atual] = Console.ReadLine().ToLower().Trim();
+                    Console.Write("Tipo: ");
+                    tiposDeProdutos[atual] = Console.ReadLine().ToLower().Trim();
+                    Console.Write("Quantidade de Produtos: ");
+                    quantidadeProdutos[atual] = Convert.ToInt32(Console.ReadLine());
+                    Console.Write("Validade: ");
+                    validade[atual] = Console.ReadLine();
+                    Console.Write("Valor: ");
+                    valores[atual] = Convert.ToDouble(Console.ReadLine());
+                    Console.WriteLine("Dados alterados com sucesso");
+                 }
+                 else
+                 {
+                     Console.WriteLine("Registro não encontrado");
+
+                 }
+
+             }
         }
 
         public void TotalDosValoresDosProdutos()
