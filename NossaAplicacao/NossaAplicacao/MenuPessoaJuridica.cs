@@ -9,17 +9,15 @@ namespace NossaAplicacao
     class MenuPessoaJuridica
     {
         string[] nomesEmpresa = new string[100];
-        int[] telefones = new int[100];
+        string[] telefones = new string[100];
         string[] emails = new string[100];
         string[] cidades = new string[100];
-        string[] enderecos = new string[100];
-        int[] numeros = new int[100];
+        string[] enderecos = new string[100];       
         string[] bairros = new string[100];
         string[] ceps = new string[100];
         int[] quantidadeFuncionarios = new int[100];
         string[] horariosEntrega = new string[100];
-        double somaQuantidadeFuncionarios = 0, mediaDeFuncionarios = 0;
-        bool validaQuantidadefuncionario = true;
+        double somaQuantidadeFuncionarios = 0, mediaDeFuncionarios = 0;        
         string maiorNome = "";
         string menorNome = "ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo";
         int atual = 0;
@@ -30,26 +28,21 @@ namespace NossaAplicacao
             Console.Write("Nome da empresa: ");
             nomesEmpresa[atual] = Console.ReadLine().ToLower().Trim();
             Console.Write("Telefone para contato: ");
-            telefones[atual] = Convert.ToInt32(Console.ReadLine());
+            telefones[atual] =Console.ReadLine();
             Console.Write("Email: ");
             emails[atual] = Console.ReadLine().ToLower().Trim();
             Console.Write("Ebdereço: ");
             enderecos[atual] = Console.ReadLine().ToLower().Trim();
             Console.Write("Cidade: ");
-            cidades[atual] = Console.ReadLine().ToLower().Trim();
-            Console.Write("Nº: ");
-            numeros[atual] = Convert.ToInt32(Console.ReadLine());
+            cidades[atual] = Console.ReadLine().ToLower().Trim();            
             Console.Write("Bairro: ");
             bairros[atual] = Console.ReadLine().ToLower().Trim();           
             Console.Write("CEP: ");
             ceps[atual] = Console.ReadLine();
-           
-
-            Console.Write("Quantidade de Funcionários: ");
-            quantidadeFuncionarios[atual] = Convert.ToInt32(Console.ReadLine());
             Console.Write("Horário para entrega: ");
             horariosEntrega[atual] = Console.ReadLine();
             atual++;
+                             
         }
 
         public void ListarPessoaJuridica()
@@ -60,9 +53,9 @@ namespace NossaAplicacao
             {
                 Console.WriteLine(
                     String.Format(
-                        "\nNome da Empresa:: {0} \nTelefone para Contato: {1} \nEmail: {2} \nEndereço: {3} \nCidade: {4} \nN°: {5}" +
-                       "\nBairro: {6} \nCEP: {7} \nQuantidade de Funcionários: {8} \nHorário para Entrega: {8}",
-                       nomesEmpresa[i], telefones[i], emails[i], enderecos[i], cidades[i], numeros[i], numeros[i], bairros[i], ceps[i],
+                        "\nNome da Empresa:: {0} \nTelefone para Contato: {1} \nEmail: {2} \nEndereço: {3} \nCidade: {4} " +
+                       "\nBairro: {5} \nCEP: {6} \nQuantidade de Funcionários: {7} \nHorário para Entrega: {8}",
+                       nomesEmpresa[i], telefones[i], emails[i], enderecos[i], cidades[i], bairros[i], ceps[i],
                        quantidadeFuncionarios[i], horariosEntrega[i]
                         )
                     );
@@ -80,9 +73,9 @@ namespace NossaAplicacao
                 {
                     Console.WriteLine(
                         String.Format(
-                             "\nNome da Empresa:: {0} \nTelefone para Contato: {1} \nEmail: {2} \nEndereço: {3} \nCidade: {4} \nN°: {5}" +
-                       "\nBairro: {6} \nCEP: {7} \nQuantidade de Funcionários: {8} \nHorário para Entrega: {8}",
-                       nomesEmpresa[i], telefones[i], emails[i], enderecos[i], cidades[i], numeros[i], numeros[i], bairros[i], ceps[i],
+                             "\nNome da Empresa:: {0} \nTelefone para Contato: {1} \nEmail: {2} \nEndereço: {3} \nCidade: {4} " +
+                       "\nBairro: {5} \nCEP: {6} \nQuantidade de Funcionários: {7} \nHorário para Entrega: {8}",
+                       nomesEmpresa[i], telefones[i], emails[i], enderecos[i], cidades[i], bairros[i], ceps[i],
                        quantidadeFuncionarios[i], horariosEntrega[i]
 
                         )
@@ -117,13 +110,11 @@ namespace NossaAplicacao
                 Console.Write("Nome da empresa: ");
                 nomesEmpresa[atual] = Console.ReadLine().ToLower().Trim();
                 Console.Write("Telefone para contato: ");
-                telefones[atual] = Convert.ToInt32(Console.ReadLine());
+                telefones[atual] = Console.ReadLine();
                 Console.Write("Email: ");
                 emails[atual] = Console.ReadLine().ToLower().Trim();
                 Console.Write("Ebdereço: ");
-                enderecos[atual] = Console.ReadLine().ToLower().Trim();
-                Console.Write("Nº: ");
-                numeros[atual] = Convert.ToInt32(Console.ReadLine());
+                enderecos[atual] = Console.ReadLine().ToLower().Trim();               
                 Console.Write("Cidade: ");
                 cidades[atual] = Console.ReadLine().ToLower().Trim();
                 Console.Write("Bairro: ");

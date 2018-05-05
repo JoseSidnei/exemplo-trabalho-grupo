@@ -167,9 +167,11 @@ namespace NossaAplicacao
 4 - Buscar 
 5 - Total Dos Valores Dos Produtos
 6 - Média Dos Valores Dos Produtos
-7 - Produto Com Maior Valor
-8 - Produto Com Menor Valor
-9 - Sair");
+7 - Maior Valor
+8 - Menor Valor
+9  - Cadastro com Maior Nome de Produto
+10 - Cadastro com Menor Nome de Produto
+11 - Sair");
                         escolhaMenu = Convert.ToInt32(Console.ReadLine());
                         Console.Clear();
 
@@ -200,6 +202,12 @@ namespace NossaAplicacao
                                 break;
                             case 8:
                                 menuProdutos.MenorValorDeProdutos();
+                                break;
+                            case 9:
+                                menuProdutos.MaiorNomeProduto();
+                                break;
+                                case 10:
+                                menuProdutos.MenorNomeProduto();
                                 break;
 
 
