@@ -244,16 +244,16 @@ namespace NossaAplicacao
                                 cadastroDeFuncionarios.NomeBuscarFuncionario();
                                 break;
                             case 5:
-
+                                cadastroDeFuncionarios.SomaDosCodigos();
                                 break;
                             case 6:
-
+                                cadastroDeFuncionarios.MediaDosCodigos();
                                 break;
                             case 7:
-
+                                cadastroDeFuncionarios.MaiorCodigo();
                                 break;
                             case 8:
-
+                                cadastroDeFuncionarios.MenorCodigo();
                                 break;
                             case 9:
                                 Console.Clear();
