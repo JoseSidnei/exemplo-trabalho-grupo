@@ -40,6 +40,12 @@ namespace NossaAplicacao
             numeros[atual] = Convert.ToInt32(Console.ReadLine());
             Console.Write("Bairro: ");
             bairros[atual] = Console.ReadLine().ToLower().Trim();
+            bool validaCep = true;
+            while (validaCep == true)
+            {
+
+            }
+
             Console.Write("CEP: ");
             ceps[atual] = Convert.ToInt32(Console.ReadLine());
             Console.Write("Quantidade de Funcionários: ");
@@ -162,12 +168,28 @@ namespace NossaAplicacao
 
         public void EmpresaMaiorNome()
         {
+            for (int i = 0; i < atual; i++)
+            {
+                if (nomesEmpresa.Length > maiorNome.Length)
+                {
+                    maiorNome = nomesEmpresa[i];
+                }
+            }
 
+            Console.WriteLine("Empresa com Maior Nome: " + maiorNome);
         }
 
         public void EmpresaMenorNome()
         {
+            for (int i = 0; i < atual; i++)
+            {
+                if (nomesEmpresa.Length < menorNome.Length)
+                {
+                    menorNome = nomesEmpresa[i];
+                }
+            }
 
+            Console.WriteLine("Empresa com Maior Nome: " + menorNome);
         }
 
     }
