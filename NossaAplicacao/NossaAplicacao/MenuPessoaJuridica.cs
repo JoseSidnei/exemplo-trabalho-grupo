@@ -15,10 +15,11 @@ namespace NossaAplicacao
         string[] enderecos = new string[100];
         int[] numeros = new int[100];
         string[] bairros = new string[100];
-        int[] ceps = new int[100];
+        string[] ceps = new string[100];
         int[] quantidadeFuncionarios = new int[100];
         string[] horariosEntrega = new string[100];
         double somaQuantidadeFuncionarios = 0, mediaDeFuncionarios = 0;
+        bool validaQuantidadefuncionario = true;
         string maiorNome = "";
         string menorNome = "ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo";
         int atual = 0;
@@ -39,15 +40,11 @@ namespace NossaAplicacao
             Console.Write("Nº: ");
             numeros[atual] = Convert.ToInt32(Console.ReadLine());
             Console.Write("Bairro: ");
-            bairros[atual] = Console.ReadLine().ToLower().Trim();
-            bool validaCep = true;
-            while (validaCep == true)
-            {
-
-            }
-
+            bairros[atual] = Console.ReadLine().ToLower().Trim();           
             Console.Write("CEP: ");
-            ceps[atual] = Convert.ToInt32(Console.ReadLine());
+            ceps[atual] = Console.ReadLine();
+           
+
             Console.Write("Quantidade de Funcionários: ");
             quantidadeFuncionarios[atual] = Convert.ToInt32(Console.ReadLine());
             Console.Write("Horário para entrega: ");
@@ -125,14 +122,14 @@ namespace NossaAplicacao
                 emails[atual] = Console.ReadLine().ToLower().Trim();
                 Console.Write("Ebdereço: ");
                 enderecos[atual] = Console.ReadLine().ToLower().Trim();
-                Console.Write("Cidade: ");
-                cidades[atual] = Console.ReadLine().ToLower().Trim();
                 Console.Write("Nº: ");
                 numeros[atual] = Convert.ToInt32(Console.ReadLine());
+                Console.Write("Cidade: ");
+                cidades[atual] = Console.ReadLine().ToLower().Trim();
                 Console.Write("Bairro: ");
                 bairros[atual] = Console.ReadLine().ToLower().Trim();
                 Console.Write("CEP: ");
-                ceps[atual] = Convert.ToInt32(Console.ReadLine());
+                ceps[atual] = Console.ReadLine();
                 Console.Write("Quantidade de Funcionários: ");
                 quantidadeFuncionarios[atual] = Convert.ToInt32(Console.ReadLine());
                 Console.WriteLine("Horário para entrega: ");

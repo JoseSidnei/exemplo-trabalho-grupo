@@ -163,7 +163,7 @@ namespace NossaAplicacao
 
         public void MenorValorDeProdutos()
         {
-            for (int i = 0; i < atual; i++)
+            for (int i = 0; i < nomeProduto.Length; i++)
             {
 
 
