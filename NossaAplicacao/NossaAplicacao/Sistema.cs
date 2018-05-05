@@ -206,8 +206,11 @@ namespace NossaAplicacao
                             case 9:
                                 menuProdutos.MaiorNomeProduto();
                                 break;
-                                case 10:
+                            case 10:
                                 menuProdutos.MenorNomeProduto();
+                                break;
+                            case 11:
+                                Console.Clear();
                                 break;
 
                         }

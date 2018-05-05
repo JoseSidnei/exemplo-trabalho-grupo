@@ -17,6 +17,7 @@ namespace NossaAplicacao
         double somaDoValorProdutos = 0;
         int atual = 0;
         double maiorValor = 0, menorValor = 100000000000000, mediaValor = 0;
+        string maiorNomeProduto = "", menorNomeProduto = "oooooooooooooooooooooooooooooooooooooooooooooooooooooooo";
 
 
         public void Produtos()
@@ -178,5 +179,31 @@ namespace NossaAplicacao
                 Console.WriteLine();
         }
 
+        public void MaiorNomeProduto()
+        {
+            for (int i = 0; i < atual; i++)
+            {
+                if (nomeProduto.Length > maiorNomeProduto.Length)
+                {
+                    maiorNomeProduto = nomeProduto[i];
+                }
+            }
+
+            Console.WriteLine("Produto com Maior Nome: " + maiorNomeProduto);
+        }
+
+
+        public void MenorNomeProduto()
+        {
+            for (int i = 0; i < atual; i++)
+            {
+                if (nomeProduto.Length < menorNomeProduto.Length)
+                {
+                    menorNomeProduto = nomeProduto[i];
+                }
+            }
+
+            Console.WriteLine("Menor Nome de Produto: " + menorNomeProduto);
+        }
     }
 }
