@@ -131,7 +131,6 @@ namespace NossaAplicacao
                             case 2:
                                 menuProdutos.EditarProdutos();
                                 break;
-
                             case 3:
                                 menuProdutos.ListarProdutos();
                                 break;

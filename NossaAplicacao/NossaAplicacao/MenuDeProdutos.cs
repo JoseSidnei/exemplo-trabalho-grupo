@@ -19,11 +19,7 @@ namespace NossaAplicacao
 
 
         public void Produtos()
-        {
-            
-
-            for (int i = 0; i < atual; i++)
-            {
+        {         
                 Console.Write("Nome do Produto: ");
                 nomeProduto[atual] = Console.ReadLine().ToLower().Trim();
                 Console.Write("Tipo: ");
@@ -36,7 +32,7 @@ namespace NossaAplicacao
                 valores[atual] = Convert.ToDouble(Console.ReadLine());
                 atual++;
                 Console.Clear();
-            }
+            
            
         }
 
