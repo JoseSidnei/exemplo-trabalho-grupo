@@ -138,7 +138,7 @@ namespace NossaAplicacao
                                 menuProdutos.EditarProdutos();
                                 break;
                             case 5:
-                                // Total dos Valores dos Produtos
+                                menuProdutos.TotalDosValoresDosProdutos();
                                 break;
                             case 6:
                                 //  Média dos Valores dos Produtos

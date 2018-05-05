@@ -14,6 +14,7 @@ namespace NossaAplicacao
         int[] quantidadeProdutos = new int[100];
         string[] validade = new string[100];
         double[] valores = new double[100];
+        double somaDoValorProdutos = 0;
         int atual = 0;
 
         public void Produtos()
@@ -27,7 +28,8 @@ namespace NossaAplicacao
             Console.Write("Validade: ");
             validade[atual] = Console.ReadLine();
             Console.Write("Valor: ");
-            valores[atual] = Convert.ToDouble(Console.ReadLine());            
+            valores[atual] = Convert.ToDouble(Console.ReadLine());
+            atual++;
         }
 
         public void ListarProdutos()
@@ -97,23 +99,31 @@ namespace NossaAplicacao
             }
         }
 
-        public void totalDosValoresDosProdutos()
+        public void TotalDosValoresDosProdutos()
         {
+            Console.Clear();
 
+            
+            for (int i = 0; i < valores.Length; i++)
+            {
+                somaDoValorProdutos = valores[i] +somaDoValorProdutos;
+            }
+
+            Console.WriteLine("Valor Total dos Produtos: R$ " + somaDoValorProdutos);
 
         }
 
-        public void mediaDosValoresDosProdutos()
+        public void MediaDosValoresDosProdutos()
         {
 
         }
 
-        public void maiorValorDeProdutos()
+        public void MaiorValorDeProdutos()
         {
 
         }
 
-        public void menorValorDeProdutos()
+        public void MenorValorDeProdutos()
         {
 
         }

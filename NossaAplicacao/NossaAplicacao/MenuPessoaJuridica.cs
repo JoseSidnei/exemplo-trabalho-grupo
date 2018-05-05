@@ -43,6 +43,7 @@ namespace NossaAplicacao
             quantidadeFuncionarios[atual] = Convert.ToInt32(Console.ReadLine());
             Console.Write("Horário para entrega: ");
             horariosEntrega[atual] = Console.ReadLine();
+            atual++;
         }
 
         public void ListarPessoaJuridica()
