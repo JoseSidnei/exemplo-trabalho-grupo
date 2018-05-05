@@ -19,6 +19,7 @@ namespace NossaAplicacao
         string[] email = new string[100];
         int atual = 0;
         double somaDasIdades = 0;
+        int menoridade = 99999999, maioridade = 0;
 
         public void CadastroDePessoas()
         {
@@ -151,12 +152,28 @@ namespace NossaAplicacao
 
         public void MaiorIdade()
         {
+            for (int i = 0; i < idade.Length; i++)
+            {
+                if (idade.Length > maioridade)
+                {
+                    maioridade = idade[atual];
+                }
 
+                Console.WriteLine(" A maior Idade é: " + idade[atual] + "Nome da Pessoa Física com maior Idade: " + nomesPessoa[atual]);
+            }
         }
 
         public void Menoridade()
         {
+            for (int i = 0; i < idade.Length; i++)
+            {
+                if (idade.Length < menoridade)
+                {
+                   menoridade = idade[atual];
+                }
 
+                Console.WriteLine(" A menor Idade é: " + idade[atual] + "Nome da Pessoa Física com menor Idade: " + nomesPessoa[atual]);
+            }
 
         }
     }

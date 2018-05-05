@@ -139,10 +139,10 @@ namespace NossaAplicacao
                                 cadastroDePessoasFisica.MediaIdade();
                                 break;
                             case 7:
-                                
+                                cadastroDePessoasFisica.MaiorIdade();
                                 break;
                             case 8:
-                                
+                                cadastroDePessoasFisica.Menoridade();
                                 break;
                             case 9:
                                 Console.Clear();
