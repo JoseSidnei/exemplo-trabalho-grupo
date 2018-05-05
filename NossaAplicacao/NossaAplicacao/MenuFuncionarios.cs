@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace NossaAplicacao
 {
-    class CadastroFuncionariosDoRestaurante
+    class MenuFuncionarios
     {
         string[] nomeFuncionario = new string[100];
         int[] codigoDeAcesso = new int[100];

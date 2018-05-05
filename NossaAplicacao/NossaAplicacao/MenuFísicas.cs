@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace NossaAplicacao
 {
-    class CadastroPessoaFisica
+    class MenuFísicas
     {
 
         string[] nomesPessoa = new string[100];

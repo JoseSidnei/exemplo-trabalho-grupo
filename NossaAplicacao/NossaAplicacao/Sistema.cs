@@ -8,10 +8,10 @@ namespace NossaAplicacao
 {
     class Sistema
     {
-        CadastroPessoaFisica cadastroDePessoasFisica = new CadastroPessoaFisica();
+        MenuFísicas cadastroDePessoasFisica = new MenuFísicas();
         MenuPessoaJuridica menuPessoaJuridica = new MenuPessoaJuridica();
         MenuDeProdutos menuProdutos = new MenuDeProdutos();
-        CadastroFuncionariosDoRestaurante cadastroDeFuncionarios = new CadastroFuncionariosDoRestaurante();
+        MenuFuncionarios cadastroDeFuncionarios = new MenuFuncionarios();
         public Sistema()
         {
 
