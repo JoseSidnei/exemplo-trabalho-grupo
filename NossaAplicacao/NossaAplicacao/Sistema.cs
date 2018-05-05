@@ -21,7 +21,7 @@ namespace NossaAplicacao
 
         public void Menu()
         {
-
+            Console.WriteLine();
             Console.WriteLine("Escolha a Opção Desejada\n");
             Console.WriteLine(@"
           

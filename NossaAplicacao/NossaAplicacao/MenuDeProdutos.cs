@@ -146,26 +146,29 @@ namespace NossaAplicacao
         public void MaiorValorDeProdutos()
         {
             for (int i = 0; i < valores.Length; i++)
-            {
-                if (valores.Length > maiorValor)
+            {                
+                if (valores[i] > maiorValor)
                 {
-                    maiorValor = valores[atual];
+                    maiorValor = valores[i];
                 }
 
-                Console.WriteLine("Produto com Maior Valor: " + nomeProduto[atual] + "Valor do Produto: " + valores[atual]);
             }
+
+            Console.WriteLine(" Valor do Produto: R$ " + maiorValor + " Produto com Maior Valor: " + nomeProduto[atual]);
         }
 
         public void MenorValorDeProdutos()
         {
             for (int i = 0; i < valores.Length; i++)
             {
+
+
                 if (valores.Length < menorValor)
                 {
-                    menorValor = valores[atual];
+                    menorValor = valores[i];
                 }
 
-                Console.WriteLine("Produto com Menor Valor: " + nomeProduto[atual] + "Valor do Produto: " + valores[atual]);
+                Console.Write("Produto com Menor Valor: " + nomeProduto[i] + "Valor do Produto: " + valores[i]);
                 Console.WriteLine();
             }
         }
