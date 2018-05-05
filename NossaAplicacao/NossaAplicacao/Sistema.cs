@@ -133,10 +133,10 @@ namespace NossaAplicacao
                                 cadastroDePessoasFisica.NomeBuscar();
                                 break;
                             case 5:
-                                
+                                cadastroDePessoasFisica.SomaIdade();
                                 break;
                             case 6:
-                                
+                                cadastroDePessoasFisica.MediaIdade();
                                 break;
                             case 7:
                                 
