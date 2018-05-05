@@ -18,6 +18,7 @@ namespace NossaAplicacao
         string[] rua = new string[100];
         string[] email = new string[100];
         int atual = 0;
+        double somaDasIdades = 0;
 
         public void CadastroDePessoas()
         {
@@ -121,6 +122,31 @@ namespace NossaAplicacao
                 Console.WriteLine("Registro não encontrado");
                 
             }
+       }
+        public void SomaIdade()
+        {
+            Console.Clear();
+
+
+            for (int i = 0; i < idade.Length; i++)
+            {
+                somaDasIdades = idade[i] + somaDasIdades;
+            }
+
+            Console.WriteLine("Soma das idades das pessoas Físicas: " + somaDasIdades);
+
+
+        }
+
+        public void MediaIdade()
+        {
+            for (int i = 0; i < idade.Length; i++)
+            {
+                somaDasIdades = somaDasIdades / idade.Length;
+            }
+
+            Console.WriteLine("Média Das Idades das pessoas Físicas: " + somaDasIdades);
+
         }
     }
 }
