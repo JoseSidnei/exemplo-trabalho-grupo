@@ -71,13 +71,13 @@ namespace NossaAplicacao
                                 menuPessoaJuridica.CadastrarPessoaJuridica();
                                 break;
                             case 2:
-                                menuPessoaJuridica.ListarPessoaJuridica();
+                                menuPessoaJuridica.EditarPessoaJuridica();
                                 break;
                             case 3:
-                                menuPessoaJuridica.BuscarPessoaJuridica();
+                                menuPessoaJuridica.ListarPessoaJuridica();
                                 break;
                             case 4:
-                                menuPessoaJuridica.EditarPessoaJuridica();
+                                menuPessoaJuridica.BuscarPessoaJuridica();
                                 break;
                             case 5:
                                 menuPessoaJuridica.TotalDeFuncionario();
