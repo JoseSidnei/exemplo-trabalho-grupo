@@ -80,16 +80,16 @@ namespace NossaAplicacao
                                 menuPessoaJuridica.EditarPessoaJuridica();
                                 break;
                             case 5:
-                                // Total De Funcionarios
+                                menuPessoaJuridica.TotalDeFuncionario();
                                 break;
                             case 6:
-                                // Média De Funcionario
+                                menuPessoaJuridica.MediaDeFuncionarios();
                                 break;
                             case 7:
-                                // Cadastro Com Maior Nome De Empresa
+                                menuPessoaJuridica.EmpresaMaiorNome();
                                 break;
                             case 8:
-                                // Cadastro Com Menor Nome De Empresa
+                                menuPessoaJuridica.EmpresaMenorNome();
                                 break;
                             case 10:
                                 Console.Clear();

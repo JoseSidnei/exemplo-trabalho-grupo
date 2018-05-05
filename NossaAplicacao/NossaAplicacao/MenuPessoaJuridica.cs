@@ -18,6 +18,9 @@ namespace NossaAplicacao
         int[] ceps = new int[100];
         int[] quantidadeFuncionarios = new int[100];
         string[] horariosEntrega = new string[100];
+        double somaQuantidadeFuncionarios = 0, mediaDeFuncionarios = 0;
+        string maiorNome = "";
+        string menorNome = "ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo";
         int atual = 0;
 
         public void CadastrarPessoaJuridica()
@@ -107,7 +110,7 @@ namespace NossaAplicacao
 
             if (posicao != -1)
             {
-                // encontrou o registro procurado
+                
                 Console.Write("Nome da empresa: ");
                 nomesEmpresa[atual] = Console.ReadLine().ToLower().Trim();
                 Console.Write("Telefone para contato: ");
@@ -136,8 +139,36 @@ namespace NossaAplicacao
             }
         }
 
-       
+       public void TotalDeFuncionario()
+       {
+            for (int i = 0; i < quantidadeFuncionarios.Length; i++)
+            {
+                somaQuantidadeFuncionarios = quantidadeFuncionarios[i] +  somaQuantidadeFuncionarios;
+            }
 
-       
+            Console.WriteLine("Quantidade Total de Funcionario: " + somaQuantidadeFuncionarios);
+            Console.WriteLine();
+       }
+
+        public void MediaDeFuncionarios()
+        {
+            for (int i = 0; i < quantidadeFuncionarios.Length; i++)
+            {
+                mediaDeFuncionarios = somaQuantidadeFuncionarios / atual;
+            }
+
+            Console.WriteLine("Média da Quantidade de Funcionarios: " + mediaDeFuncionarios);
+        }
+
+        public void EmpresaMaiorNome()
+        {
+
+        }
+
+        public void EmpresaMenorNome()
+        {
+
+        }
+
     }
 }
