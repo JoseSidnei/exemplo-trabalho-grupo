@@ -18,8 +18,8 @@ namespace NossaAplicacao
         string[] rua = new string[100];
         string[] email = new string[100];
         int atual = 0;
-        double somaDasIdades = 0;
-        int menoridade = 99999999, maioridade = 0;
+        double somaDasIdades = 0, mediaDaIdade = 0;
+        string menornome = "KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK", maiornome = "";
 
         public void CadastroDePessoas()
         {
@@ -143,38 +143,36 @@ namespace NossaAplicacao
         {
             for (int i = 0; i < idade.Length; i++)
             {
-                somaDasIdades = somaDasIdades / idade.Length;
+                mediaDaIdade = somaDasIdades / atual;
             }
 
-            Console.WriteLine("Média Das Idades das pessoas Físicas: " + somaDasIdades);
-
+            Console.WriteLine("Média das idades: " + mediaDaIdade);
         }
 
-        public void MaiorIdade()
+        public void MaiorNome()
         {
-            for (int i = 0; i < idade.Length; i++)
+            for (int i = 0; i < atual; i++)
             {
-                if (idade.Length > maioridade)
+                if (nomesPessoa[i].Length > maiornome.Length)
                 {
-                    maioridade = idade[atual];
+                    maiornome = nomesPessoa[i];
                 }
-
-                Console.WriteLine(" A maior Idade é: " + idade[atual] + "Nome da Pessoa Física com maior Idade: " + nomesPessoa[atual]);
             }
+
+            Console.WriteLine("Pessoa Física com maior nome: " + maiornome);
         }
 
-        public void Menoridade()
+        public void MenorNome()
         {
-            for (int i = 0; i < idade.Length; i++)
+            for (int i = 0; i < atual; i++)
             {
-                if (idade.Length < menoridade)
+                if (nomesPessoa[i].Length < menornome.Length)
                 {
-                   menoridade = idade[atual];
+                    menornome = nomesPessoa[i];
                 }
-
-                Console.WriteLine(" A menor Idade é: " + idade[atual] + "Nome da Pessoa Física com menor Idade: " + nomesPessoa[atual]);
             }
 
+            Console.WriteLine("Pessoa com menor nome: " + menornome);
         }
     }
 }

@@ -110,8 +110,8 @@ namespace NossaAplicacao
 4 - Buscar  
 5 - Total Das Idades de Pessoas Físicas
 6 - Média Das Idades de Pessoas Físicas
-7 - Pessoa Física Com Maior Idade
-8 - Pessoa Física Com Menor Idade
+7 - Pessoa Física Com Maior Nome
+8 - Pessoa Física Com Menor Nome
 9 - Sair");
                         escolhaMenu = Convert.ToInt32(Console.ReadLine());
                         Console.Clear();
@@ -139,10 +139,10 @@ namespace NossaAplicacao
                                 cadastroDePessoasFisica.MediaIdade();
                                 break;
                             case 7:
-                                cadastroDePessoasFisica.MaiorIdade();
+                                cadastroDePessoasFisica.MaiorNome();
                                 break;
                             case 8:
-                                cadastroDePessoasFisica.Menoridade();
+                                cadastroDePessoasFisica.MenorNome();
                                 break;
                             case 9:
                                 Console.Clear();
@@ -234,8 +234,8 @@ namespace NossaAplicacao
 4 - Buscar 
 5 - Total Dos Codigos Dos Funcionário
 6 - Média Dos Codigos Dos Funcionário
-7 - Funcionario Com Maior Código 
-8 - Funcionario Com Menor Código
+7 - Funcionario Com Maior Nome 
+8 - Funcionario Com Menor Nome
 9 - Sair");
                         escolhaMenu = Convert.ToInt32(Console.ReadLine());
                         Console.Clear();
