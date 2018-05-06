@@ -12,6 +12,8 @@ namespace NossaAplicacao
         MenuPessoaJuridica menuPessoaJuridica = new MenuPessoaJuridica();
         MenuDeProdutos menuProdutos = new MenuDeProdutos();
         MenuFuncionarios cadastroDeFuncionarios = new MenuFuncionarios();
+        bool validaçaoMenu = true;
+        int escolhaMenu = 0;
         public Sistema()
         {
 
@@ -38,8 +40,23 @@ namespace NossaAplicacao
 
         public void GerirMenu()
         {
-            Menu();
-            int escolhaMenu = Convert.ToInt32(Console.ReadLine());
+            // Menu();
+            // int escolhaMenu = Convert.ToInt32(Console.ReadLine());
+            validaçaoMenu = true;
+            while (validaçaoMenu == true)
+            {
+                try
+                {
+                    Menu();
+                    int escolhaMenu = Convert.ToInt32(Console.ReadLine());
+                    validaçaoMenu = false;
+                }
+                catch (Exception)
+                {
+                    Console.Clear();
+                    Console.WriteLine("Digite um dos numeros a baixo");
+                }
+            }
 
 
             while (escolhaMenu != 5)

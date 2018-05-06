@@ -19,20 +19,63 @@ namespace NossaAplicacao
         int atual = 0;
         double somaDasIdades = 0, mediaDaIdade = 0;
         string menornome = "KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK", maiornome = "";
+        bool validacaoNumero = true, validacaoIdade = true, validacaoCep = true;
 
         public void CadastroDePessoas()
         {
             Console.Clear();
             Console.Write("Nome : ");
             nomesPessoa[atual] = Console.ReadLine();
-            Console.Write("Nº: ");
-            numeroCasa[atual] = Convert.ToInt32(Console.ReadLine());
-            Console.Write("Idade: ");
-            idade[atual] = Convert.ToInt32(Console.ReadLine());
+            validacaoNumero = true;
+            while (validacaoNumero == true)
+            {
+                try
+                {
+                    Console.Write("Nº: ");
+                    numeroCasa[atual] = Convert.ToInt32(Console.ReadLine());
+                    validacaoNumero = false;
+                }
+                catch (Exception)
+                {
+
+                    Console.WriteLine("Digite novamente o Numero por favor");
+                }
+            }
+            validacaoIdade = true;
+            while (validacaoIdade == true)
+            {
+                try
+                {
+                    Console.Write("Idade: ");
+                    idade[atual] = Convert.ToInt32(Console.ReadLine());
+                    validacaoIdade = false;
+                }
+                catch (Exception)
+                {
+
+                    Console.WriteLine("Digite novamente a Idade por favor");
+                }
+            }
+
+            
             Console.Write("Cidade: ");
             cidade[atual] = Console.ReadLine();
-            Console.Write("Cep: ");
-            cep[atual] = Convert.ToInt32(Console.ReadLine());
+            validacaoCep = true;
+            while (validacaoCep == true)
+            {
+                try
+                {
+                    Console.Write("Cep: ");
+                    cep[atual] = Convert.ToInt32(Console.ReadLine());
+                    validacaoCep = false;
+                }
+                catch (Exception)
+                {
+
+                    Console.WriteLine("Digite novamente o CEP por favor");
+                }
+            }
+            
             Console.Write("Bairro: ");
             bairro[atual] = Console.ReadLine();
             Console.Write("Rua: ");
