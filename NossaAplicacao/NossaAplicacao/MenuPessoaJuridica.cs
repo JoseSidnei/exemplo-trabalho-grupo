@@ -9,13 +9,13 @@ namespace NossaAplicacao
     class MenuPessoaJuridica
     {
         string[] nomesEmpresa = new string[100];
-        string[] telefones = new string[100];
+        int[] telefones = new int[100];
         string[] emails = new string[100];
         string[] cidades = new string[100];
         string[] enderecos = new string[100];
         int[] numero = new int[100];
         string[] bairros = new string[100];
-        string[] ceps = new string[100];
+        int[] ceps = new int[100];
         int[] quantidadeFuncionarios = new int[100];
         string[] horariosEntrega = new string[100];
         double somaQuantidadeFuncionarios = 0, mediaDeFuncionarios = 0;        
@@ -27,38 +27,144 @@ namespace NossaAplicacao
         public void CadastrarPessoaJuridica()
         {
             Console.Clear();
-            Console.Write("Nome da empresa: ");
-            nomesEmpresa[atual] = Console.ReadLine().ToLower().Trim();
-            Console.Write("Telefone para contato: ");
-            telefones[atual] =Console.ReadLine();
+
+            validaNomeEmpresa = true;
+            while (validaNomeEmpresa == true)
+            {
+                try
+                {
+                    Console.Write("Nome da empresa: ");
+                    nomesEmpresa[atual] = Console.ReadLine().ToLower().Trim();
+                    validaNomeEmpresa = false;
+                }
+                catch (Exception)
+                {
+
+                    Console.WriteLine("Por favor informe o Nome da empresa novamente, utilizando apenas letras ");
+                }
+            }
+
+            validaTelefone = true;
+            while (validaTelefone == true)
+            {
+                try
+                {
+                     Console.Write("Telefone para contato: ");
+                     telefones[atual] =Convert.ToInt32(Console.ReadLine());
+                     validaTelefone = false;
+
+                }
+                catch (Exception)
+                {
+
+                    Console.WriteLine("Por favor informe o Telefone  novamente, utilizando apenas números ");
+                }
+            }
+
             Console.Write("Email: ");
             emails[atual] = Console.ReadLine().ToLower().Trim();
-            Console.Write("Ebdereço: ");
-            enderecos[atual] = Console.ReadLine().ToLower().Trim();
+
+            validaEndereço = true;
+            while (validaEndereço == true)
+            {
+                try
+                {
+                     Console.Write("Ebdereço: ");
+                     enderecos[atual] = Console.ReadLine().ToLower().Trim();
+                     validaEndereço = false;
+
+                }
+                catch (Exception)
+                {
+
+                    Console.WriteLine("Por favor informe Endereço novamente, utilizando apenas letras ");
+                }
+            }
+
+            validaNumero = true;
             while (validaNumero == true)
             {
                 try
                 {
-                    Console.Write("Nº: ");
+                    Console.Write("Número: ");
                     numero[atual] = Convert.ToInt32(Console.ReadLine());
                     validaNumero = false;
                 }
                 catch (Exception)
                 {
 
-                    Console.WriteLine("Nº deve conter apenas Números ");
+                    Console.WriteLine("Por favor informe o Número novamente, utilizando apenas números inteiros ");
                 }
             }
-            Console.Write("Cidade: ");
-            cidades[atual] = Console.ReadLine().ToLower().Trim();            
-            Console.Write("Bairro: ");
-            bairros[atual] = Console.ReadLine().ToLower().Trim();           
-            Console.Write("CEP: ");
-            ceps[atual] = Console.ReadLine();
-            Console.Write("Quantidade de Funcionários: ");
-            quantidadeFuncionarios[atual] = Convert.ToInt32(Console.ReadLine());
-            Console.Write("Horário para entrega: ");
-            horariosEntrega[atual] = Console.ReadLine();
+
+            validaCidade = true;
+            while (validaCidade == true)
+            {
+                try
+                {
+                    Console.Write("Cidade: ");
+                    cidades[atual] = Console.ReadLine().ToLower().Trim();
+                    validaCidade = true;
+
+                }
+                catch (Exception)
+                {
+
+                    Console.WriteLine("Por favor informe a Cidade novamente, utilizando apenas letras ");
+                }
+            }
+
+            validaBairro = true;
+            while (validaCidade == true)
+            {
+                try
+                {
+                     Console.Write("Bairro: ");
+                     bairros[atual] = Console.ReadLine().ToLower().Trim();
+                     validaBairro = false;
+
+                }
+                catch (Exception)
+                {
+
+                    Console.WriteLine("Por fvor informe Bairro novamente, utilizando apenas letras ");
+                }
+            }
+
+            validaCep = true;
+            while (validaCep == true)
+            {
+                try
+                {
+                     Console.Write("CEP: ");
+                     ceps[atual] = Convert.ToInt32(Console.ReadLine());
+                     validaCep = false;
+                }
+                catch (Exception )
+                {
+
+                    Console.WriteLine("Por favor informe CEp novamente, utilizando apenas números ");
+                }
+            }
+
+            validaQuantidadeFuncionario = true;
+            while (validaQuantidadeFuncionario == true)
+            {
+                try
+                {
+                     Console.Write("Quantidade de Funcionários: ");
+                     quantidadeFuncionarios[atual] = Convert.ToInt32(Console.ReadLine());
+                     validaQuantidadeFuncionario = false;
+
+                }
+                catch (Exception)
+                {
+
+                    Console.WriteLine("Por favor informe Quantidade de Funcionários novamente, utilizando apenas números inteiros ");
+                }
+            }
+
+            
             atual++;
                              
         }
@@ -71,10 +177,10 @@ namespace NossaAplicacao
             {
                 Console.WriteLine(
                     String.Format(
-                        "\nNome da Empresa:: {0} \nTelefone para Contato: {1} \nEmail: {2} \nEndereço: {3} \nCidade: {4} \nNº: {5}" +
-                       "\nBairro: {6} \nCEP: {7} \nQuantidade de Funcionários: {8} \nHorário para Entrega: {9}",
+                        "\nNome da Empresa:: {0} \nTelefone para Contato: {1} \nEmail: {2} \nEndereço: {3} \nCidade: {4} \nNúmero: {5}" +
+                       "\nBairro: {6} \nCEP: {7} \nQuantidade de Funcionários: {8} ",
                        nomesEmpresa[i], telefones[i], emails[i], enderecos[i], cidades[i], bairros[i], ceps[i],
-                       quantidadeFuncionarios[i], horariosEntrega[i]
+                       quantidadeFuncionarios[i]
                         )
                     );
             }
@@ -91,10 +197,10 @@ namespace NossaAplicacao
                 {
                     Console.WriteLine(
                         String.Format(
-                             "\nNome da Empresa:: {0} \nTelefone para Contato: {1} \nEmail: {2} \nEndereço: {3} \nCidade: {4} " +
-                       "\nBairro: {5} \nCEP: {6} \nQuantidade de Funcionários: {7} \nHorário para Entrega: {8}",
+                             "\nNome da Empresa:: {0} \nTelefone para Contato: {1} \nEmail: {2} \nEndereço: {3} \nCidade: {4} \nNúmero: {5} " +
+                       "\nBairro: {6} \nCEP: {7} \nQuantidade de Funcionários: {8} ",
                        nomesEmpresa[i], telefones[i], emails[i], enderecos[i], cidades[i], bairros[i], ceps[i],
-                       quantidadeFuncionarios[i], horariosEntrega[i]
+                       quantidadeFuncionarios[i]
 
                         )
                     );
@@ -124,25 +230,142 @@ namespace NossaAplicacao
 
             if (posicao != -1)
             {
-                
-                Console.Write("Nome da empresa: ");
-                nomesEmpresa[atual] = Console.ReadLine().ToLower().Trim();
-                Console.Write("Telefone para contato: ");
-                telefones[atual] = Console.ReadLine();
+                validaNomeEmpresa = true;
+                while (validaNomeEmpresa == true)
+                {
+                    try
+                    {
+                        Console.Write("Nome da empresa: ");
+                        nomesEmpresa[atual] = Console.ReadLine().ToLower().Trim();
+                        validaNomeEmpresa = false;
+                    }
+                    catch (Exception)
+                    {
+
+                        Console.WriteLine("Por favor informe o Nome da empresa novamente, utilizando apenas letras ");
+                    }
+                }
+
+                validaTelefone = true;
+                while (validaTelefone == true)
+                {
+                    try
+                    {
+                        Console.Write("Telefone para contato: ");
+                        telefones[atual] = Convert.ToInt32(Console.ReadLine());
+                        validaTelefone = false;
+
+                    }
+                    catch (Exception)
+                    {
+
+                        Console.WriteLine("Por favor informe o Telefone  novamente, utilizando apenas números ");
+                    }
+                }
+
                 Console.Write("Email: ");
                 emails[atual] = Console.ReadLine().ToLower().Trim();
-                Console.Write("Ebdereço: ");
-                enderecos[atual] = Console.ReadLine().ToLower().Trim();               
-                Console.Write("Cidade: ");
-                cidades[atual] = Console.ReadLine().ToLower().Trim();
-                Console.Write("Bairro: ");
-                bairros[atual] = Console.ReadLine().ToLower().Trim();
-                Console.Write("CEP: ");
-                ceps[atual] = Console.ReadLine();
-                Console.Write("Quantidade de Funcionários: ");
-                quantidadeFuncionarios[atual] = Convert.ToInt32(Console.ReadLine());
-                Console.WriteLine("Horário para entrega: ");
-                horariosEntrega[atual] = Console.ReadLine();
+
+                validaEndereço = true;
+                while (validaEndereço == true)
+                {
+                    try
+                    {
+                        Console.Write("Ebdereço: ");
+                        enderecos[atual] = Console.ReadLine().ToLower().Trim();
+                        validaEndereço = false;
+
+                    }
+                    catch (Exception)
+                    {
+
+                        Console.WriteLine("Por favor informe Endereço novamente, utilizando apenas letras ");
+                    }
+                }
+
+                validaNumero = true;
+                while (validaNumero == true)
+                {
+                    try
+                    {
+                        Console.Write("Número: ");
+                        numero[atual] = Convert.ToInt32(Console.ReadLine());
+                        validaNumero = false;
+                    }
+                    catch (Exception)
+                    {
+
+                        Console.WriteLine("Por favor informe o Número novamente, utilizando apenas números inteiros ");
+                    }
+                }
+
+                validaCidade = true;
+                while (validaCidade == true)
+                {
+                    try
+                    {
+                        Console.Write("Cidade: ");
+                        cidades[atual] = Console.ReadLine().ToLower().Trim();
+                        validaCidade = true;
+
+                    }
+                    catch (Exception)
+                    {
+
+                        Console.WriteLine("Por favor informe a Cidade novamente, utilizando apenas letras ");
+                    }
+                }
+
+                validaBairro = true;
+                while (validaCidade == true)
+                {
+                    try
+                    {
+                        Console.Write("Bairro: ");
+                        bairros[atual] = Console.ReadLine().ToLower().Trim();
+                        validaBairro = false;
+
+                    }
+                    catch (Exception)
+                    {
+
+                        Console.WriteLine("Por fvor informe Bairro novamente, utilizando apenas letras ");
+                    }
+                }
+
+                validaCep = true;
+                while (validaCep == true)
+                {
+                    try
+                    {
+                        Console.Write("CEP: ");
+                        ceps[atual] = Convert.ToInt32(Console.ReadLine());
+                        validaCep = false;
+                    }
+                    catch (Exception)
+                    {
+
+                        Console.WriteLine("Por favor informe CEp novamente, utilizando apenas números ");
+                    }
+                }
+
+                validaQuantidadeFuncionario = true;
+                while (validaQuantidadeFuncionario == true)
+                {
+                    try
+                    {
+                        Console.Write("Quantidade de Funcionários: ");
+                        quantidadeFuncionarios[atual] = Convert.ToInt32(Console.ReadLine());
+                        validaQuantidadeFuncionario = false;
+
+                    }
+                    catch (Exception)
+                    {
+
+                        Console.WriteLine("Por favor informe Quantidade de Funcionários novamente, utilizando apenas números inteiros ");
+                    }
+                }
+
             }
             else
             {
