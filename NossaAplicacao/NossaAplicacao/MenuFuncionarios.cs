@@ -15,14 +15,31 @@ namespace NossaAplicacao
         int atual = 0;
         double somaDosCodigos = 0, mediadoscodigos = 0;
         string maiorNome = "", menorNome = "KKKKKKKKKKKKKKKKKKKKKKKKKKJJJJJJJJKKKKKKKKKKKKKKKK";
-
+        bool validacaoCodigo = true;
         public void CadastroFuncionarios()
         {
             Console.Clear();
             Console.Write("Nome Do Funcionário: ");
             nomeFuncionario[atual] = Console.ReadLine();
-            Console.Write("Código De Acesso: ");
-            codigoDeAcesso[atual] = Convert.ToInt32(Console.ReadLine());
+            validacaoCodigo = true;
+            while (validacaoCodigo == true)
+            {
+                try
+                {
+                    Console.Write("Código De Acesso: ");
+                    codigoDeAcesso[atual] = Convert.ToInt32(Console.ReadLine());
+                    validacaoCodigo = false;
+
+                }
+                catch (Exception)
+                {
+                    
+                    Console.WriteLine("Digite novamente o codigo Por Favor");
+                    
+
+
+                }
+            }
             Console.Write("Setor Que Trabalha: ");
             SetorQueTrabalha[atual] = Console.ReadLine();
             Console.Write("Turno Que Trabalha : ");
@@ -88,8 +105,22 @@ namespace NossaAplicacao
             Console.Clear();
             Console.Write("Nome Funcionário: ");
             nomeFuncionario[atual] = Console.ReadLine();
-            Console.Write("Código De Acesso: ");
-            codigoDeAcesso[atual] = Convert.ToInt32(Console.ReadLine());
+                validacaoCodigo = true;
+                while (validacaoCodigo == true)
+                {
+                    try
+                    {
+                        Console.Write("Código De Acesso: ");
+                        codigoDeAcesso[atual] = Convert.ToInt32(Console.ReadLine());
+                        validacaoCodigo = false;
+                    }
+                    catch (Exception)
+                    {
+
+                        Console.WriteLine("Digite novamente o código por favor"); 
+                    }
+                }
+            
             Console.Write("Setor Que Trabalha: ");
             SetorQueTrabalha[atual] = Console.ReadLine();
             Console.Write("Turno Que Trabalha : ");
