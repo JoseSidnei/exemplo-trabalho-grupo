@@ -54,7 +54,7 @@ namespace NossaAplicacao
                 catch (Exception)
                 {
                     Console.Clear();
-                    Console.WriteLine("Digite um dos numeros a baixo");
+                    Console.Write("Escolha a opção desejada: ");
                 }
             }
 
