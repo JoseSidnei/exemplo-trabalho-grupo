@@ -27,22 +27,10 @@ namespace NossaAplicacao
         public void CadastrarPessoaJuridica()
         {
             Console.Clear();
-
+            Console.Write("Nome da empresa: ");
+            nomesEmpresa[atual] = Console.ReadLine().ToLower().Trim();
             validaNomeEmpresa = true;
-            while (validaNomeEmpresa == true)
-            {
-                try
-                {
-                    Console.Write("Nome da empresa: ");
-                    nomesEmpresa[atual] = Console.ReadLine().ToLower().Trim();
-                    validaNomeEmpresa = true;
-                }
-                catch (Exception )
-                {
-
-                    Console.WriteLine("Por favor informe o Nome da empresa novamente, utilizando apenas letras ");
-                }
-            }
+     
             validaTelefone = true;
             while (validaTelefone == true)
             {
@@ -58,26 +46,13 @@ namespace NossaAplicacao
 
                     Console.WriteLine("Por favor informe o Telefone  novamente, utilizando apenas números ");
                 }
-            }            
+            } 
+            
             Console.Write("Email: ");
             emails[atual] = Console.ReadLine().ToLower().Trim();
-
-            validaEndereço = true;
-            while (validaEndereço == true)
-            {
-                try
-                {
-                     Console.Write("Ebdereço: ");
-                     enderecos[atual] = Console.ReadLine().ToLower().Trim();
-                     validaEndereço = false;
-
-                }
-                catch (Exception)
-                {
-
-                    Console.WriteLine("Por favor informe Endereço novamente, utilizando apenas letras ");
-                }
-            }
+            Console.Write("Ebdereço: ");
+            enderecos[atual] = Console.ReadLine().ToLower().Trim();
+        
             validaNumero = true;
             while (validaNumero == true)
             {
@@ -93,39 +68,13 @@ namespace NossaAplicacao
                     Console.WriteLine("Por favor informe o Número novamente, utilizando apenas números inteiros ");
                 }
             }
-            validaCidade = true;
-            while (validaCidade == true)
-            {
-                try
-                {
-                    Console.Write("Cidade: ");
-                    cidades[atual] = Console.ReadLine().ToLower().Trim();
-                    validaCidade = true;
-
-                }
-                catch (Exception)
-                {
-
-                    Console.WriteLine("Por favor informe a Cidade novamente, utilizando apenas letras ");
-                }
-            }
-            validaBairro = true;
-            while (validaCidade == true)
-            {
-                try
-                {
-                     Console.Write("Bairro: ");
-                     bairros[atual] = Console.ReadLine().ToLower().Trim();
-                     validaBairro = false;
-
-                }
-                catch (Exception)
-                {
-
-                    Console.WriteLine("Por fvor informe Bairro novamente, utilizando apenas letras ");
-                }
-            }
-
+           
+            Console.Write("Cidade: ");
+            cidades[atual] = Console.ReadLine().ToLower().Trim();
+            Console.Write("Bairro: ");
+            bairros[atual] = Console.ReadLine().ToLower().Trim();
+            
+     
             validaCep = true;
             while (validaCep == true)
             {
@@ -251,12 +200,7 @@ namespace NossaAplicacao
                 emails[atual] = Console.ReadLine().ToLower().Trim();
                 Console.Write("Ebdereço: ");
                 enderecos[atual] = Console.ReadLine().ToLower().Trim();
-                
-
-               
-
-                   
-
+             
                 validaNumero = true;
                 while (validaNumero == true)
                 {
