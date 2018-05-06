@@ -22,40 +22,12 @@ namespace NossaAplicacao
 
         public void Produtos()
         {
-            validaProduto = true;
-            while (validaProduto == true)
-            {
-                try
-                {
-                     Console.Write("Nome do Produto: ");
-                     nomeProduto[atual] = Console.ReadLine().ToLower().Trim();
-                     validaProduto = false;
-
-                }
-                catch (Exception)
-                {
-
-                    Console.WriteLine("Por favor informe Nome do Produto novamente, utilizando apenas letras ");
-                }
-            }
-
-            validaTipo = true;
-            while (validaTipo == true)
-            {
-                try
-                {
-                     Console.Write("Tipo: ");
-                     tiposDeProdutos[atual] = Console.ReadLine().ToLower().Trim();
-                     validaTipo = false;
-
-                }
-                catch (Exception)
-                {
-
-                    Console.WriteLine("Por favor informe o Tipo novamente, utilizando apenas letras ");
-                }
-            }
-
+           
+             Console.Write("Nome do Produto: ");
+             nomeProduto[atual] = Console.ReadLine().ToLower().Trim();             
+             Console.Write("Tipo: ");
+             tiposDeProdutos[atual] = Console.ReadLine().ToLower().Trim();
+   
             validaQuantidade = true;
             while (validaQuantidade == true)
             {
@@ -151,40 +123,10 @@ namespace NossaAplicacao
 
                  if (posicao != -1)
                  {
-
-                    validaProduto = true;
-                    while (validaProduto == true)
-                    {
-                        try
-                        {
-                            Console.Write("Nome do Produto: ");
-                            nomeProduto[atual] = Console.ReadLine().ToLower().Trim();
-                            validaProduto = false;
-
-                        }
-                        catch (Exception)
-                        {
-
-                            Console.WriteLine("Por favor informe Nome do Produto novamente, utilizando apenas letras ");
-                        }
-                    }
-
-                    validaTipo = true;
-                    while (validaTipo == true)
-                    {
-                        try
-                        {
-                            Console.Write("Tipo: ");
-                            tiposDeProdutos[atual] = Console.ReadLine().ToLower().Trim();
-                            validaTipo = false;
-
-                        }
-                        catch (Exception)
-                        {
-
-                            Console.WriteLine("Por favor informe o Tipo novamente, utilizando apenas letras ");
-                        }
-                    }
+                    Console.Write("Nome do Produto: ");
+                    nomeProduto[atual] = Console.ReadLine().ToLower().Trim();
+                    Console.Write("Tipo: ");
+                    tiposDeProdutos[atual] = Console.ReadLine().ToLower().Trim();
 
                     validaQuantidade = true;
                     while (validaQuantidade == true)
@@ -219,10 +161,11 @@ namespace NossaAplicacao
                         }
                     }
 
-                }
+
+                 }
                  else
                  {
-                     Console.WriteLine("Registro não encontrado");
+                    Console.WriteLine("Registro não encontrado");
                     Console.WriteLine();
 
                  }
