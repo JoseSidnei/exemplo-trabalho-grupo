@@ -16,8 +16,7 @@ namespace NossaAplicacao
         int[] numero = new int[100];
         string[] bairros = new string[100];
         int[] ceps = new int[100];
-        int[] quantidadeFuncionarios = new int[100];
-        string[] horariosEntrega = new string[100];
+        int[] quantidadeFuncionarios = new int[100];        
         double somaQuantidadeFuncionarios = 0, mediaDeFuncionarios = 0;        
         string maiorNomeJuridico = "";
         string menorNomeJuridico = "ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo";

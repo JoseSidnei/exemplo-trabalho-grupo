@@ -11,27 +11,84 @@ namespace NossaAplicacao
         
         string[] tiposDeProdutos = new string[100];
         string[] nomeProduto = new string[100];
-        int[] quantidadeProdutos = new int[100];        
-        string[] validade = new string[100];
+        int[] quantidadeProdutos = new int[100];                
         double[] valores = new double[100];
         double somaDoValorProdutos = 0;
         int atual = 0;
         double maiorValor = 0, menorValor = 100000000000000, mediaValor = 0, somaQuantidadeProdutos = 0, mediaQuantidadeProdutos = 0;
         string maiorNomeProduto = "", menorNomeProduto = "oooooooooooooooooooooooooooooooooooooooooooooooooooooooo";
+        bool validaProduto = true, validaTipo = true, validaQuantidade = true, validaValor = true;
 
 
         public void Produtos()
-        {         
-                Console.Write("Nome do Produto: ");
-                nomeProduto[atual] = Console.ReadLine().ToLower().Trim();
-                Console.Write("Tipo: ");
-                tiposDeProdutos[atual] = Console.ReadLine().ToLower().Trim();
-                Console.Write("Quantidade de Produtos: ");
-                quantidadeProdutos[atual] = Convert.ToInt32(Console.ReadLine());
-                Console.Write("Validade: ");
-                validade[atual] = Console.ReadLine();
-                Console.Write("Valor: ");
-                valores[atual] = Convert.ToDouble(Console.ReadLine());
+        {
+            validaProduto = true;
+            while (validaProduto == true)
+            {
+                try
+                {
+                     Console.Write("Nome do Produto: ");
+                     nomeProduto[atual] = Console.ReadLine().ToLower().Trim();
+                     validaProduto = false;
+
+                }
+                catch (Exception)
+                {
+
+                    Console.WriteLine("Por favor informe Nome do Produto novamente, utilizando apenas letras ");
+                }
+            }
+
+            validaTipo = true;
+            while (validaTipo == true)
+            {
+                try
+                {
+                     Console.Write("Tipo: ");
+                     tiposDeProdutos[atual] = Console.ReadLine().ToLower().Trim();
+                     validaTipo = false;
+
+                }
+                catch (Exception)
+                {
+
+                    Console.WriteLine("Por favor informe o Tipo novamente, utilizando apenas letras ");
+                }
+            }
+
+            validaQuantidade = true;
+            while (validaQuantidade == true)
+            {
+                try
+                {
+
+                     Console.Write("Quantidade de Produtos: ");
+                     quantidadeProdutos[atual] = Convert.ToInt32(Console.ReadLine());               
+                }
+                catch (Exception)
+                {
+
+                    Console.WriteLine("Por favor informe Quantidade de Produtos novamente, utilizando apenas números inteiros ");
+                }
+            }
+
+            validaValor = true;
+            while (validaValor == true)
+            {
+                try
+                {
+                     Console.Write("Valor: ");
+                     valores[atual] = Convert.ToDouble(Console.ReadLine());
+                     validaValor = false;
+
+                }
+                catch (Exception)
+                {
+
+                    Console.WriteLine("Por favor informe Valor novamente, utilizando apenas números ");
+                }
+            }
+
                 atual++;
                 Console.Clear();
             
@@ -46,8 +103,8 @@ namespace NossaAplicacao
             {
                 Console.WriteLine(
                     String.Format(
-                        "\nNome: {0} \nTipo: {1} \nQuantidade de Produtos: {2} \nValidade: {3} \nValor: R$ {4}",
-                       tiposDeProdutos[i], nomeProduto[i], quantidadeProdutos[i], validade[i], valores[i]
+                        "\nNome: {0} \nTipo: {1} \nQuantidade de Produtos: {2}  \nValor: R$ {3}",
+                       tiposDeProdutos[i], nomeProduto[i], quantidadeProdutos[i], valores[i]
                         )
                     );
             }
@@ -64,8 +121,8 @@ namespace NossaAplicacao
                 {
                     Console.WriteLine(
                         String.Format(
-                              "\nNome: {0} \nTipo: {1} \nQuantidade de Produtos: {2} \nValidade: {3} \nValor: R$ {4}",
-                       tiposDeProdutos[i], nomeProduto[i], quantidadeProdutos[i], validade[i], valores[i]
+                              "\nNome: {0} \nTipo: {1} \nQuantidade de Produtos: {2} \nValor: R$ {3}",
+                       tiposDeProdutos[i], nomeProduto[i], quantidadeProdutos[i], valores[i]
 
                         )
                     );
@@ -94,20 +151,75 @@ namespace NossaAplicacao
 
                  if (posicao != -1)
                  {
-                     
-                    Console.Write("Nome do Produto: ");
-                    nomeProduto[atual] = Console.ReadLine().ToLower().Trim();
-                    Console.Write("Tipo: ");
-                    tiposDeProdutos[atual] = Console.ReadLine().ToLower().Trim();
-                    Console.Write("Quantidade de Produtos: ");
-                    quantidadeProdutos[atual] = Convert.ToInt32(Console.ReadLine());
-                    Console.Write("Validade: ");
-                    validade[atual] = Console.ReadLine();
-                    Console.Write("Valor: ");
-                    valores[atual] = Convert.ToDouble(Console.ReadLine());
-                    Console.WriteLine();
-                    Console.WriteLine("Dados alterados com sucesso");
-                 }
+
+                    validaProduto = true;
+                    while (validaProduto == true)
+                    {
+                        try
+                        {
+                            Console.Write("Nome do Produto: ");
+                            nomeProduto[atual] = Console.ReadLine().ToLower().Trim();
+                            validaProduto = false;
+
+                        }
+                        catch (Exception)
+                        {
+
+                            Console.WriteLine("Por favor informe Nome do Produto novamente, utilizando apenas letras ");
+                        }
+                    }
+
+                    validaTipo = true;
+                    while (validaTipo == true)
+                    {
+                        try
+                        {
+                            Console.Write("Tipo: ");
+                            tiposDeProdutos[atual] = Console.ReadLine().ToLower().Trim();
+                            validaTipo = false;
+
+                        }
+                        catch (Exception)
+                        {
+
+                            Console.WriteLine("Por favor informe o Tipo novamente, utilizando apenas letras ");
+                        }
+                    }
+
+                    validaQuantidade = true;
+                    while (validaQuantidade == true)
+                    {
+                        try
+                        {
+
+                            Console.Write("Quantidade de Produtos: ");
+                            quantidadeProdutos[atual] = Convert.ToInt32(Console.ReadLine());
+                        }
+                        catch (Exception)
+                        {
+
+                            Console.WriteLine("Por favor informe Quantidade de Produtos novamente, utilizando apenas números inteiros ");
+                        }
+                    }
+
+                    validaValor = true;
+                    while (validaValor == true)
+                    {
+                        try
+                        {
+                            Console.Write("Valor: ");
+                            valores[atual] = Convert.ToDouble(Console.ReadLine());
+                            validaValor = false;
+
+                        }
+                        catch (Exception)
+                        {
+
+                            Console.WriteLine("Por favor informe Valor novamente, utilizando apenas números ");
+                        }
+                    }
+
+                }
                  else
                  {
                      Console.WriteLine("Registro não encontrado");
