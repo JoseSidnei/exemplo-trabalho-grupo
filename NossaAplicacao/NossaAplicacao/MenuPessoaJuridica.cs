@@ -25,19 +25,46 @@ namespace NossaAplicacao
 
         public void CadastrarPessoaJuridica()
         {
+
             Console.Clear();
-            Console.Write("Nome da empresa: ");
-            nomesEmpresa[atual] = Console.ReadLine().ToLower().Trim();
-           
-     
+            bool validarTexto = true;
+            while (validarTexto == true)
+            {
+                try
+                {
+                    Console.Write("Nome da Empresa: ");
+                    nomesEmpresa[atual] = Console.ReadLine();
+                    if (nomesEmpresa[atual].Length >= 4)
+                    {
+                        validarTexto = false;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Nome da empresa precisa conter pelo menos 4 carácteres ");
+                    }
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine("Por favor informe o Nome da empresa novamente, utilizando apenas letras ");
+                }
+            }
+
+
             validaTelefone = true;
             while (validaTelefone == true)
             {
                 try
                 {
                     Console.Write("Telefone para contato: ");
-                    telefones[atual] =Convert.ToInt32(Console.ReadLine());
-                    validaTelefone = false;
+                    telefones[atual] = Convert.ToInt32(Console.ReadLine());
+                    if (telefones[atual] > 0)
+                    {
+                        validaTelefone = false;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Telefone precisa ser maior que 0 ");
+                    }
 
                 }
                 catch (Exception)
@@ -49,9 +76,29 @@ namespace NossaAplicacao
             
             Console.Write("Email: ");
             emails[atual] = Console.ReadLine().ToLower().Trim();
-            Console.Write("Ebdereço: ");
-            enderecos[atual] = Console.ReadLine().ToLower().Trim();
-           
+
+            bool validaEndereco = true;
+            while (validaEndereco == true)
+            {
+                try
+                {
+                    Console.Write("Endereço: ");
+                    enderecos[atual] = Console.ReadLine();
+                    if (nomesEmpresa[atual].Length >= 4)
+                    {
+                        validaEndereco = false;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Endereço deve conter pelo menos 4 carácteres");
+                    }
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine("Por favor informe o Endereço novamente, utilizando apenas letras ");
+                }
+            }
+
 
             validaNumero = true;
             while (validaNumero == true)
@@ -60,7 +107,15 @@ namespace NossaAplicacao
                 {
                     Console.Write("Número: ");
                     numero[atual] = Convert.ToInt32(Console.ReadLine());
-                    validaNumero = false;
+                    if (numero[atual] > 0)
+                    {
+                        validaNumero = false;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Número precisa ser maior que 0 ");
+                    }
+                    
                 }
                 catch (Exception)
                 {
@@ -68,13 +123,52 @@ namespace NossaAplicacao
                     Console.WriteLine("Por favor informe o Número novamente, utilizando apenas números inteiros ");
                 }
             }
-           
-            Console.Write("Cidade: ");
-            cidades[atual] = Console.ReadLine().ToLower().Trim();
-            Console.Write("Bairro: ");
-            bairros[atual] = Console.ReadLine().ToLower().Trim();
-            
-     
+
+            bool validaCidade = true;
+            while (validaCidade == true)
+            {
+                try
+                {
+                    Console.Write("Cidade: ");
+                    cidades[atual] = Console.ReadLine();
+                    if (cidades[atual].Length >= 4)
+                    {
+                        validaCidade = false;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Cidade deve conter pelo menos 4 carácteres");
+                    }
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine("Por favor informe a Cidade novamente, utilizando apenas letras ");
+                }
+            }
+
+            bool validaBairro = true;
+            while (validaBairro == true)
+            {
+                try
+                {
+                    Console.Write("Bairro: ");
+                    bairros[atual] = Console.ReadLine();
+                    if (bairros[atual].Length >= 4)
+                    {
+                        validaBairro = false;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Bairro deve conter pelo menos 4 carácteres");
+                    }
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine("Por favor informe o Bairro novamente, utilizando apenas letras ");
+                }
+            }
+
+
             validaCep = true;
             while (validaCep == true)
             {
@@ -82,7 +176,16 @@ namespace NossaAplicacao
                 {
                     Console.Write("CEP: ");
                     ceps[atual] = Convert.ToInt32(Console.ReadLine());
-                    validaCep = false;
+                    if (ceps[atual] > 0)
+                    {
+                       validaCep = false;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Número precisa ser maior que 0 ");
+                    }
+
+                  
                 }
                 catch (Exception )
                 {
@@ -174,11 +277,30 @@ namespace NossaAplicacao
 
             if (posicao != -1)
             {
-               
-                Console.Write("Nome da empresa: ");
-                nomesEmpresa[atual] = Console.ReadLine().ToLower().Trim();
-                
-               
+
+                bool validarTexto = true;
+                while (validarTexto == true)
+                {
+                    try
+                    {
+                        Console.Write("Nome da Empresa: ");
+                        nomesEmpresa[atual] = Console.ReadLine();
+                        if (nomesEmpresa[atual].Length >= 4)
+                        {
+                            validarTexto = false;
+                        }
+                        else
+                        {
+                            Console.WriteLine("Nome da empresa precisa conter pelo menos 4 carácteres ");
+                        }
+                    }
+                    catch (Exception)
+                    {
+                        Console.WriteLine("Por favor informe o Nome da empresa novamente, utilizando apenas letras ");
+                    }
+                }
+
+
                 validaTelefone = true;
                 while (validaTelefone == true)
                 {
@@ -186,7 +308,14 @@ namespace NossaAplicacao
                     {
                         Console.Write("Telefone para contato: ");
                         telefones[atual] = Convert.ToInt32(Console.ReadLine());
-                        validaTelefone = false;
+                        if (telefones[atual] > 0)
+                        {
+                            validaTelefone = false;
+                        }
+                        else
+                        {
+                            Console.WriteLine("Telefone precisa ser amior que 0 ");
+                        }
 
                     }
                     catch (Exception)
@@ -198,9 +327,30 @@ namespace NossaAplicacao
 
                 Console.Write("Email: ");
                 emails[atual] = Console.ReadLine().ToLower().Trim();
-                Console.Write("Ebdereço: ");
-                enderecos[atual] = Console.ReadLine().ToLower().Trim();
-             
+
+                bool validaEndereco = true;
+                while (validaEndereco == true)
+                {
+                    try
+                    {
+                        Console.Write("Endereço: ");
+                        enderecos[atual] = Console.ReadLine();
+                        if (nomesEmpresa[atual].Length >= 10)
+                        {
+                            validaEndereco = false;
+                        }
+                        else
+                        {
+                            Console.WriteLine("Endereço deve conter pelo menos 10 carácteres");
+                        }
+                    }
+                    catch (Exception)
+                    {
+                        Console.WriteLine("Por favor informe o Endereço novamente, utilizando apenas letras ");
+                    }
+                }
+
+
                 validaNumero = true;
                 while (validaNumero == true)
                 {
@@ -216,12 +366,52 @@ namespace NossaAplicacao
                         Console.WriteLine("Por favor informe o Número novamente, utilizando apenas números inteiros ");
                     }
                 }
-                
-                Console.Write("Cidade: ");
-                cidades[atual] = Console.ReadLine().ToLower().Trim();
-                Console.Write("Bairro: ");
-                bairros[atual] = Console.ReadLine().ToLower().Trim();
-            
+
+                bool validaCidade = true;
+                while (validaCidade == true)
+                {
+                    try
+                    {
+                        Console.Write("Cidade: ");
+                        cidades[atual] = Console.ReadLine();
+                        if (cidades[atual].Length >= 4)
+                        {
+                            validaCidade = false;
+                        }
+                        else
+                        {
+                            Console.WriteLine("Cidade deve conter pelo menos 4 carácteres");
+                        }
+                    }
+                    catch (Exception)
+                    {
+                        Console.WriteLine("Por favor informe a Cidade novamente, utilizando apenas letras ");
+                    }
+                }
+
+                bool validaBairro = true;
+                while (validaBairro == true)
+                {
+                    try
+                    {
+                        Console.Write("Bairro: ");
+                        bairros[atual] = Console.ReadLine();
+                        if (bairros[atual].Length >= 4)
+                        {
+                            validaBairro = false;
+                        }
+                        else
+                        {
+                            Console.WriteLine("Bairro deve conter pelo menos 4 carácteres");
+                        }
+                    }
+                    catch (Exception)
+                    {
+                        Console.WriteLine("Por favor informe o Bairro novamente, utilizando apenas letras ");
+                    }
+                }
+
+
                 validaCep = true;
                 while (validaCep == true)
                 {
@@ -229,12 +419,20 @@ namespace NossaAplicacao
                     {
                         Console.Write("CEP: ");
                         ceps[atual] = Convert.ToInt32(Console.ReadLine());
-                        validaCep = false;
+                        if (ceps[atual] > 0)
+                        {
+                            validaCep = false;
+                        }
+                        else
+                        {
+                            Console.WriteLine("Número precisa ser maior que 0 ");
+                        }
+                       
                     }
                     catch (Exception)
                     {
 
-                        Console.WriteLine("Por favor informe CEp novamente, utilizando apenas números ");
+                        Console.WriteLine("Por favor informe CEP novamente, utilizando apenas números ");
                     }
                 }
 
@@ -245,7 +443,15 @@ namespace NossaAplicacao
                     {
                         Console.Write("Quantidade de Funcionários: ");
                         quantidadeFuncionarios[atual] = Convert.ToInt32(Console.ReadLine());
-                        validaQuantidadeFuncionario = false;
+                        if (quantidadeFuncionarios[atual] > 0)
+                        {
+                            validaQuantidadeFuncionario = false;
+
+                        }
+                        else
+                        {
+                            Console.WriteLine("Quantidade de Funcionários precisa ser maior que 0 ");
+                        }
 
                     }
                     catch (Exception)
@@ -254,7 +460,6 @@ namespace NossaAplicacao
                         Console.WriteLine("Por favor informe Quantidade de Funcionários novamente, utilizando apenas números inteiros ");
                     }
                 }
-
             }
             else
             {
