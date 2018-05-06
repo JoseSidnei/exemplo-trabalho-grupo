@@ -12,7 +12,8 @@ namespace NossaAplicacao
         string[] telefones = new string[100];
         string[] emails = new string[100];
         string[] cidades = new string[100];
-        string[] enderecos = new string[100];       
+        string[] enderecos = new string[100];
+        int[] numero = new int[100];
         string[] bairros = new string[100];
         string[] ceps = new string[100];
         int[] quantidadeFuncionarios = new int[100];
@@ -21,7 +22,8 @@ namespace NossaAplicacao
         string maiorNomeJuridico = "";
         string menorNomeJuridico = "ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo";
         int atual = 0;
-
+        bool validaNumero = true, validaCep = true, validaNomeEmpresa = true, validaTelefone = true, validaEndereço = true,
+             validaCidade = true, validaBairro = true, validaHorario = true, validaQuantidadeFuncionario = true;
         public void CadastrarPessoaJuridica()
         {
             Console.Clear();
@@ -33,6 +35,20 @@ namespace NossaAplicacao
             emails[atual] = Console.ReadLine().ToLower().Trim();
             Console.Write("Ebdereço: ");
             enderecos[atual] = Console.ReadLine().ToLower().Trim();
+            while (validaNumero == true)
+            {
+                try
+                {
+                    Console.Write("Nº: ");
+                    numero[atual] = Convert.ToInt32(Console.ReadLine());
+                    validaNumero = false;
+                }
+                catch (Exception)
+                {
+
+                    Console.WriteLine("Nº deve conter apenas Números ");
+                }
+            }
             Console.Write("Cidade: ");
             cidades[atual] = Console.ReadLine().ToLower().Trim();            
             Console.Write("Bairro: ");
@@ -55,8 +71,8 @@ namespace NossaAplicacao
             {
                 Console.WriteLine(
                     String.Format(
-                        "\nNome da Empresa:: {0} \nTelefone para Contato: {1} \nEmail: {2} \nEndereço: {3} \nCidade: {4} " +
-                       "\nBairro: {5} \nCEP: {6} \nQuantidade de Funcionários: {7} \nHorário para Entrega: {8}",
+                        "\nNome da Empresa:: {0} \nTelefone para Contato: {1} \nEmail: {2} \nEndereço: {3} \nCidade: {4} \nNº: {5}" +
+                       "\nBairro: {6} \nCEP: {7} \nQuantidade de Funcionários: {8} \nHorário para Entrega: {9}",
                        nomesEmpresa[i], telefones[i], emails[i], enderecos[i], cidades[i], bairros[i], ceps[i],
                        quantidadeFuncionarios[i], horariosEntrega[i]
                         )
