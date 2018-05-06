@@ -178,14 +178,14 @@ namespace NossaAplicacao
                     case 3:
                         Console.Clear();
                         Console.WriteLine(@"
-1 - Cadastrar 
-2 - Editar 
-3 - Listar 
-4 - Buscar 
-5 - Total Dos Valores Dos Produtos
-6 - Média Dos Valores Dos Produtos
-7 - Maior Valor
-8 - Menor Valor
+1  - Cadastrar 
+2  - Editar 
+3  - Listar 
+4  - Buscar 
+5  - Total Dos Valores Dos Produtos
+6  - Média Dos Valores Dos Produtos
+7  - Maior Valor
+8  - Menor Valor
 9  - Cadastro com Maior Nome de Produto
 10 - Cadastro com Menor Nome de Produto
 11 - Total de quantidade de Produto
