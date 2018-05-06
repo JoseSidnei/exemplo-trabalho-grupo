@@ -8,7 +8,7 @@ namespace NossaAplicacao
 {
     class Sistema
     {
-        MenuFísicas cadastroDePessoasFisica = new MenuFísicas();
+        Menufisica cadastroDePessoasFisica = new Menufisica();
         MenuPessoaJuridica menuPessoaJuridica = new MenuPessoaJuridica();
         MenuDeProdutos menuProdutos = new MenuDeProdutos();
         MenuFuncionarios cadastroDeFuncionarios = new MenuFuncionarios();
@@ -260,13 +260,13 @@ namespace NossaAplicacao
                                 cadastroDeFuncionarios.SomaDosCodigos();
                                 break;
                             case 6:
-                                cadastroDeFuncionarios.MediaDosCodigos();
+                                cadastroDeFuncionarios.MediaCodigoDeAcesso();
                                 break;
                             case 7:
-                                cadastroDeFuncionarios.MaiorCodigo();
+                                cadastroDeFuncionarios.MaiorNome();
                                 break;
                             case 8:
-                                cadastroDeFuncionarios.MenorCodigo();
+                                cadastroDeFuncionarios.MenorNome();
                                 break;
                             case 9:
                                 Console.Clear();

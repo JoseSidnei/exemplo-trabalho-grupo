@@ -13,7 +13,8 @@ namespace NossaAplicacao
         string[] SetorQueTrabalha = new string[100];
         string[] TurnoQueTrabalha = new string[100];
         int atual = 0;
-        double somaDosCodigos = 0, maiorCodigo = 0, menorCodigo = 99999999;
+        double somaDosCodigos = 0, mediadoscodigos = 0;
+        string maiorNome = "", menorNome = "KKKKKKKKKKKKKKKKKKKKKKKKKKJJJJJJJJKKKKKKKKKKKKKKKK";
 
         public void CadastroFuncionarios()
         {
@@ -102,33 +103,6 @@ namespace NossaAplicacao
             }
         }
 
-
-        public void MaiorCodigo()
-        {
-            for (int i = 0; i < codigoDeAcesso.Length; i++)
-            {
-                if (codigoDeAcesso.Length > maiorCodigo)
-                {
-                    maiorCodigo = codigoDeAcesso[atual];
-                }
-
-                Console.WriteLine(" O Maior Código é: " + codigoDeAcesso[atual] + "Nome do Funcionário com Maior Código: " + nomeFuncionario[atual]);
-            }
-        }
-
-        public void MenorCodigo()
-        {
-            for (int i = 0; i < codigoDeAcesso.Length; i++)
-            {
-                if (codigoDeAcesso.Length < menorCodigo)
-                {
-                    menorCodigo = codigoDeAcesso[atual];
-                }
-
-                Console.WriteLine(" O menor Código é: " + codigoDeAcesso[atual] + "Nome do Funcionário com menor Código: " + nomeFuncionario[atual]);               
-            }
-        }
-
         public void SomaDosCodigos()
         {
             Console.Clear();
@@ -139,20 +113,45 @@ namespace NossaAplicacao
                 somaDosCodigos = codigoDeAcesso[i] + somaDosCodigos;
             }
 
-            Console.WriteLine("Soma dos Códigos de acesso: " + somaDosCodigos);
+            Console.WriteLine("Soma dos codigos de acesso do funcionario: " + somaDosCodigos);
 
 
         }
 
-        public void MediaDosCodigos()
+        public void MediaCodigoDeAcesso()
         {
             for (int i = 0; i < codigoDeAcesso.Length; i++)
             {
-                somaDosCodigos = somaDosCodigos / codigoDeAcesso.Length;
+                 mediadoscodigos = somaDosCodigos / atual;
             }
 
-            Console.WriteLine("Média Dos Códigos de acesso: " + somaDosCodigos);
+            Console.WriteLine("Média das idades: " + mediadoscodigos);
+        }
 
+        public void MaiorNome()
+        {
+            for (int i = 0; i < atual; i++)
+            {
+                if (nomeFuncionario[i].Length > maiorNome.Length)
+                {
+                    maiorNome = nomeFuncionario[i];
+                }
+            }
+
+            Console.WriteLine("Funcionario com maior nome: " + maiorNome);
+        }
+
+        public void MenorNome()
+        {
+            for (int i = 0; i < atual; i++)
+            {
+                if (nomeFuncionario[i].Length < menorNome.Length)
+                {
+                    menorNome = nomeFuncionario[i];
+                }
+            }
+
+            Console.WriteLine("Funcionario com menor nome: " + menorNome);
         }
     }
 }

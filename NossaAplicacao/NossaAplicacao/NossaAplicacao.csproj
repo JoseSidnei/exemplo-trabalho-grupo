@@ -42,8 +42,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MenuDeProdutos.cs" />
+    <Compile Include="Menufisica.cs" />
     <Compile Include="MenuFuncionarios.cs" />
-    <Compile Include="MenuFísicas.cs" />
     <Compile Include="MenuPessoaJuridica.cs" />
     <Compile Include="Sistema.cs" />
     <Compile Include="Program.cs" />
