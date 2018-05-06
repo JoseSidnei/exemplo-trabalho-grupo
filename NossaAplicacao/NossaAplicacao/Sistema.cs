@@ -171,7 +171,9 @@ namespace NossaAplicacao
 8 - Menor Valor
 9  - Cadastro com Maior Nome de Produto
 10 - Cadastro com Menor Nome de Produto
-11 - Sair");
+11 - Total de quantidade de Produto
+12 - Média da Quantidade Total de Produto
+13 - Sair");
                         escolhaMenu = Convert.ToInt32(Console.ReadLine());
                         Console.Clear();
 
@@ -210,6 +212,12 @@ namespace NossaAplicacao
                                 menuProdutos.MenorNomeProduto();
                                 break;
                             case 11:
+                                menuProdutos.TotalQuantidadeProduto();
+                                break;
+                            case 12:
+                                menuProdutos.MediaQuantidadeTotal();
+                                break;
+                            case 13:
                                 Console.Clear();
                                 break;
 

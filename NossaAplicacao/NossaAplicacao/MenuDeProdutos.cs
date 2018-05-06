@@ -16,7 +16,7 @@ namespace NossaAplicacao
         double[] valores = new double[100];
         double somaDoValorProdutos = 0;
         int atual = 0;
-        double maiorValor = 0, menorValor = 100000000000000, mediaValor = 0;
+        double maiorValor = 0, menorValor = 100000000000000, mediaValor = 0, somaQuantidadeProdutos = 0, mediaQuantidadeProdutos = 0;
         string maiorNomeProduto = "", menorNomeProduto = "oooooooooooooooooooooooooooooooooooooooooooooooooooooooo";
 
 
@@ -141,7 +141,7 @@ namespace NossaAplicacao
                mediaValor  = somaDoValorProdutos / atual;
             }
 
-            Console.WriteLine("Média do Total dos Produtos: R$ " + mediaValor);
+            Console.WriteLine("Média do Valor Total dos Produtos: R$ " + mediaValor);
             Console.WriteLine();
             
 
@@ -205,5 +205,28 @@ namespace NossaAplicacao
 
             Console.WriteLine("Menor Nome de Produto: " + menorNomeProduto);
         }
+
+        public void TotalQuantidadeProduto()
+        {
+            for (int i = 0; i < quantidadeProdutos.Length; i++)
+            {
+                somaQuantidadeProdutos = quantidadeProdutos[i] + somaQuantidadeProdutos;
+            }
+
+            Console.WriteLine("Total da Quantidade de Produto: " + somaQuantidadeProdutos);
+        }
+
+        public void MediaQuantidadeTotal()
+        {
+            for (int i = 0; i < quantidadeProdutos.Length; i++)
+            {
+                mediaQuantidadeProdutos = somaQuantidadeProdutos / atual;
+            }
+
+            Console.WriteLine("Média da Quantidade de Produto: " + mediaQuantidadeProdutos);
+
+        }
+
     }
+
 }
