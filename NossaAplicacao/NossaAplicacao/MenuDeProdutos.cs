@@ -17,7 +17,7 @@ namespace NossaAplicacao
         int atual = 0;
         double maiorValor = 0, menorValor = 100000000000000, mediaValor = 0, somaQuantidadeProdutos = 0, mediaQuantidadeProdutos = 0;
         string maiorNomeProduto = "", menorNomeProduto = "oooooooooooooooooooooooooooooooooooooooooooooooooooooooo";
-        bool validaProduto = true, validaTipo = true, validaQuantidade = true, validaValor = true;
+        bool validaQuantidade = true, validaValor = true;
 
 
         public void Produtos()
@@ -33,9 +33,9 @@ namespace NossaAplicacao
             {
                 try
                 {
-
-                     Console.Write("Quantidade de Produtos: ");
-                     quantidadeProdutos[atual] = Convert.ToInt32(Console.ReadLine());               
+                    Console.Write("Quantidade de Produtos: ");
+                    quantidadeProdutos[atual] = Convert.ToInt32(Console.ReadLine());
+                    validaQuantidade= false;
                 }
                 catch (Exception)
                 {
@@ -94,7 +94,7 @@ namespace NossaAplicacao
                     Console.WriteLine(
                         String.Format(
                               "\nNome: {0} \nTipo: {1} \nQuantidade de Produtos: {2} \nValor: R$ {3}",
-                       tiposDeProdutos[i], nomeProduto[i], quantidadeProdutos[i], valores[i]
+                        nomeProduto[i], tiposDeProdutos[i], quantidadeProdutos[i], valores[i]
 
                         )
                     );

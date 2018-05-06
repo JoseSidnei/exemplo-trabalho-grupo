@@ -21,24 +21,23 @@ namespace NossaAplicacao
         string maiorNomeJuridico = "";
         string menorNomeJuridico = "ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo";
         int atual = 0;
-        bool validaNumero = true, validaCep = true, validaNomeEmpresa = true, validaTelefone = true, validaEndereço = true,
-             validaCidade = true, validaBairro = true, validaHorario = true, validaQuantidadeFuncionario = true;
+        bool validaNumero = true, validaCep = true, validaTelefone = true, validaQuantidadeFuncionario = true;
 
         public void CadastrarPessoaJuridica()
         {
             Console.Clear();
             Console.Write("Nome da empresa: ");
             nomesEmpresa[atual] = Console.ReadLine().ToLower().Trim();
-            validaNomeEmpresa = true;
+           
      
             validaTelefone = true;
             while (validaTelefone == true)
             {
                 try
                 {
-                     Console.Write("Telefone para contato: ");
-                     telefones[atual] =Convert.ToInt32(Console.ReadLine());
-                     validaTelefone = false;
+                    Console.Write("Telefone para contato: ");
+                    telefones[atual] =Convert.ToInt32(Console.ReadLine());
+                    validaTelefone = false;
 
                 }
                 catch (Exception)
@@ -52,7 +51,8 @@ namespace NossaAplicacao
             emails[atual] = Console.ReadLine().ToLower().Trim();
             Console.Write("Ebdereço: ");
             enderecos[atual] = Console.ReadLine().ToLower().Trim();
-        
+           
+
             validaNumero = true;
             while (validaNumero == true)
             {
@@ -80,9 +80,9 @@ namespace NossaAplicacao
             {
                 try
                 {
-                     Console.Write("CEP: ");
-                     ceps[atual] = Convert.ToInt32(Console.ReadLine());
-                     validaCep = false;
+                    Console.Write("CEP: ");
+                    ceps[atual] = Convert.ToInt32(Console.ReadLine());
+                    validaCep = false;
                 }
                 catch (Exception )
                 {
@@ -97,7 +97,7 @@ namespace NossaAplicacao
                 try
                 {
                      Console.Write("Quantidade de Funcionários: ");
-                     quantidadeFuncionarios[atual] = Convert.ToInt32(Console.ReadLine());
+                     quantidadeFuncionarios[atual] = Convert.ToInt32(Console.ReadLine());                     
                      validaQuantidadeFuncionario = false;
 
                 }
@@ -108,9 +108,9 @@ namespace NossaAplicacao
                 }
             }
 
-            
             atual++;
-                             
+
+
         }
 
         public void ListarPessoaJuridica()
