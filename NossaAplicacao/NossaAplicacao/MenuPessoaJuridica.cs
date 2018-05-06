@@ -121,9 +121,9 @@ namespace NossaAplicacao
             {
                 Console.WriteLine(
                     String.Format(
-                        "\nNome da Empresa:: {0} \nTelefone para Contato: {1} \nEmail: {2} \nEndereço: {3} \nCidade: {4} \nNúmero: {5}" +
+                        "\nNome da Empresa: {0} \nTelefone para Contato: {1} \nEmail: {2} \nEndereço: {3} \nNúmero: {4} \nCidade: {5} " +
                        "\nBairro: {6} \nCEP: {7} \nQuantidade de Funcionários: {8} ",
-                       nomesEmpresa[i], telefones[i], emails[i], enderecos[i], cidades[i], bairros[i], ceps[i],
+                       nomesEmpresa[i], telefones[i], emails[i], enderecos[i], numero[i], cidades[i], bairros[i], ceps[i],
                        quantidadeFuncionarios[i]
                         )
                     );
@@ -141,9 +141,9 @@ namespace NossaAplicacao
                 {
                     Console.WriteLine(
                         String.Format(
-                             "\nNome da Empresa:: {0} \nTelefone para Contato: {1} \nEmail: {2} \nEndereço: {3} \nCidade: {4} \nNúmero: {5} " +
+                              "\nNome da Empresa: {0} \nTelefone para Contato: {1} \nEmail: {2} \nEndereço: {3} \nNúmero: {4} \nCidade: {5} " +
                        "\nBairro: {6} \nCEP: {7} \nQuantidade de Funcionários: {8} ",
-                       nomesEmpresa[i], telefones[i], emails[i], enderecos[i], cidades[i], bairros[i], ceps[i],
+                       nomesEmpresa[i], telefones[i], emails[i], enderecos[i], numero[i], cidades[i], bairros[i], ceps[i],
                        quantidadeFuncionarios[i]
 
                         )
