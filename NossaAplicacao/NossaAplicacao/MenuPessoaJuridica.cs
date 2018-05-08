@@ -174,7 +174,7 @@ namespace NossaAplicacao
             {
                 try
                 {
-                    Console.Write("CEP: ");
+                    Console.Write("CEP utilizando apenas números: ");
                     ceps[atual] = Convert.ToInt32(Console.ReadLine());
                     if (ceps[atual] > 0)
                     {
@@ -190,7 +190,7 @@ namespace NossaAplicacao
                 catch (Exception )
                 {
 
-                    Console.WriteLine("Por favor informe CEp novamente, utilizando apenas números ");
+                    Console.WriteLine("Por favor informe CEP novamente, utilizando apenas números ");
                 }
             }
 
@@ -274,7 +274,6 @@ namespace NossaAplicacao
                     posicao = i;
                 }
             }
-
             if (posicao != -1)
             {
 
@@ -515,5 +514,9 @@ namespace NossaAplicacao
             Console.WriteLine("Empresa com Maior Nome: " + menorNomeJuridico);
         }
 
+        public void VoltarMenuJuridico()
+        {
+            Console.Clear();
+        }
     }
 }

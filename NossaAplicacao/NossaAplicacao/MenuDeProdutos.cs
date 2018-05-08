@@ -175,119 +175,111 @@ namespace NossaAplicacao
                  {
                      posicao = i;
                  }
+             }
+             if (posicao != -1)
+             {
 
-                 if (posicao != -1)
-                 {
-
-                    bool validaProduto = true;
-                    while (validaProduto == true)
+                bool validaProduto = true;
+                while (validaProduto == true)
+                {
+                    try
                     {
-                        try
+                        Console.Write("Nome do Produto: ");
+                        nomeProduto[atual] = Console.ReadLine();
+                        if (nomeProduto[atual].Length >= 4)
                         {
-                            Console.Write("Nome do Produto: ");
-                            nomeProduto[atual] = Console.ReadLine();
-                            if (nomeProduto[atual].Length >= 4)
-                            {
-                                validaProduto = false;
-                            }
-                            else
-                            {
-                                Console.WriteLine("Nome do Produto deve conter pelo menos 4 carácteres");
-                            }
+                            validaProduto = false;
                         }
-                        catch (Exception)
+                        else
                         {
-                            Console.WriteLine("Por favor informe o Nome do Produto novamente, utilizando apenas letras ");
+                            Console.WriteLine("Nome do Produto deve conter pelo menos 4 carácteres");
                         }
                     }
-
-                    bool validaTipo = true;
-                    while (validaTipo == true)
+                    catch (Exception)
                     {
-                        try
+                        Console.WriteLine("Por favor informe o Nome do Produto novamente, utilizando apenas letras ");
+                    }
+                }
+
+                bool validaTipo = true;
+                while (validaTipo == true)
+                {
+                    try
+                    {
+                        Console.Write("Tipo: ");
+                        tiposDeProdutos[atual] = Console.ReadLine();
+                        if (tiposDeProdutos[atual].Length >= 4)
                         {
-                            Console.Write("Tipo: ");
-                            tiposDeProdutos[atual] = Console.ReadLine();
-                            if (tiposDeProdutos[atual].Length >= 4)
-                            {
-                                validaTipo = false;
-                            }
-                            else
-                            {
-                                Console.WriteLine("Tipo deve conter pelo menos 4 carácteres");
-                            }
+                            validaTipo = false;
                         }
-                        catch (Exception)
+                        else
                         {
-                            Console.WriteLine("Por favor informe o Tipo novamente, utilizando apenas letras ");
+                            Console.WriteLine("Tipo deve conter pelo menos 4 carácteres");
                         }
                     }
-
-                    validaQuantidade = true;
-                    while (validaQuantidade == true)
+                    catch (Exception)
                     {
-                        try
-                        {
-                            Console.Write("Quantidade de Produtos: ");
-                            quantidadeProdutos[atual] = Convert.ToInt32(Console.ReadLine());
-                            if (quantidadeProdutos[atual] > 0)
-                            {
-                                validaQuantidade = false;
+                        Console.WriteLine("Por favor informe o Tipo novamente, utilizando apenas letras ");
+                    }
+                }
 
-                            }
-                            else
-                            {
-                                Console.WriteLine("Quantidade de produtos deve ser maior que 0 ");
-                            }
+                validaQuantidade = true;
+                while (validaQuantidade == true)
+                {
+                    try
+                    {
+                        Console.Write("Quantidade de Produtos: ");
+                        quantidadeProdutos[atual] = Convert.ToInt32(Console.ReadLine());
+                        if (quantidadeProdutos[atual] > 0)
+                        {
+                            validaQuantidade = false;
+
                         }
-                        catch (Exception)
+                        else
                         {
-
-                            Console.WriteLine("Por favor informe Quantidade de Produtos novamente, utilizando apenas números inteiros ");
+                            Console.WriteLine("Quantidade de produtos deve ser maior que 0 ");
                         }
                     }
-
-                    validaValor = true;
-                    while (validaValor == true)
+                    catch (Exception)
                     {
-                        try
-                        {
-                            Console.Write("Valor: ");
-                            valores[atual] = Convert.ToDouble(Console.ReadLine());
-                            if (valores[atual] > 0)
-                            {
-                                validaValor = false;
 
-                            }
-                            else
-                            {
-                                Console.WriteLine("Valor deve ser maior que 0 ");
-                            }
-
-                        }
-                        catch (Exception)
-                        {
-
-                            Console.WriteLine("Por favor informe Valor novamente, utilizando apenas números ");
-                        }
+                        Console.WriteLine("Por favor informe Quantidade de Produtos novamente, utilizando apenas números inteiros ");
                     }
+                }
 
-                   
+                validaValor = true;
+                while (validaValor == true)
+                {
+                    try
+                    {
+                        Console.Write("Valor: ");
+                        valores[atual] = Convert.ToDouble(Console.ReadLine());
+                        if (valores[atual] > 0)
+                        {
+                            validaValor = false;
 
+                        }
+                        else
+                        {
+                            Console.WriteLine("Valor deve ser maior que 0 ");
+                        }
 
-              
+                    }
+                    catch (Exception)
+                    {
 
-
-
-                 }
-                 else
-                 {
-                    Console.WriteLine("Registro não encontrado");
-                    Console.WriteLine();
-
-                 }
+                        Console.WriteLine("Por favor informe Valor novamente, utilizando apenas números ");
+                    }
+                }
 
              }
+             else
+             {
+                Console.WriteLine("Registro não encontrado");
+                Console.WriteLine();
+
+             }
+
         }
 
         public void TotalDosValoresDosProdutos()
@@ -396,6 +388,12 @@ namespace NossaAplicacao
             }
 
             Console.WriteLine("Média da Quantidade de Produto: " + mediaQuantidadeProdutos);
+
+        }
+
+        public void VoltarMenuProduto()
+        {
+            Console.Clear();
 
         }
 

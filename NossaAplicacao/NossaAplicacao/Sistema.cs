@@ -11,9 +11,8 @@ namespace NossaAplicacao
         Menufisica cadastroDePessoasFisica = new Menufisica();
         MenuPessoaJuridica menuPessoaJuridica = new MenuPessoaJuridica();
         MenuDeProdutos menuProdutos = new MenuDeProdutos();
-        MenuFuncionarios cadastroDeFuncionarios = new MenuFuncionarios();
-        bool validaçaoMenu = true;
-        int escolhaMenu = 0;
+        MenuFuncionarios cadastroDeFuncionarios = new MenuFuncionarios();        
+        
         public Sistema()
         {
 
@@ -23,8 +22,8 @@ namespace NossaAplicacao
 
         public void Menu()
         {
-            Console.WriteLine();
-            Console.WriteLine("Escolha a Opção Desejada\n");
+            
+            Console.WriteLine("Escolha a Opção Desejada ");
             Console.WriteLine(@"
           
 1  - Pessoa Jurídica
@@ -32,7 +31,7 @@ namespace NossaAplicacao
 3  - Produtos
 4  - Funcionários 
 5  - Sair");
-
+            Console.WriteLine();
 
         }
 
@@ -40,21 +39,31 @@ namespace NossaAplicacao
 
         public void GerirMenu()
         {
-            // Menu();
-            // int escolhaMenu = Convert.ToInt32(Console.ReadLine());
-            validaçaoMenu = true;
-            while (validaçaoMenu == true)
+            Menu();
+            bool validaMenu = true;
+            int escolhaMenu = 0;
+            while (validaMenu == true)
             {
                 try
                 {
-                    Menu();
-                    int escolhaMenu = Convert.ToInt32(Console.ReadLine());
-                    validaçaoMenu = false;
+                    Console.Write("Opção desejada: ");
+                    escolhaMenu = Convert.ToInt32(Console.ReadLine());
+                    Console.Clear();
+                    if ((escolhaMenu >= 1) && (escolhaMenu <= 5))
+                    {
+                        validaMenu = false;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Ops ! Algo está errado, digite novamente o número da opção desejada ");
+                        Console.WriteLine();
+                    }
                 }
                 catch (Exception)
                 {
-                    Console.Clear();
-                    Console.WriteLine("Digite um dos numeros a baixo");
+                    
+                    Console.WriteLine("Escolha a opção desejada utilando apenas os números listados ");
+                    Console.WriteLine();
                 }
             }
 
@@ -65,19 +74,43 @@ namespace NossaAplicacao
                 { /*Primeiro switch chave aberta*/
                     case 1:
                         Console.Clear();
-                        Console.WriteLine(@"
-1 - Cadastrar 
-2 - Editar 
-3 - Listar
-4 - Buscar 
-5 - Total De Funcionários
-6 - Média De Funcionários
-7 - Cadastro Com Maior Nome De Empresa
-8 - Cadastro Com Menor Nome De Empresa
-10 - Sair");
+                        Console.WriteLine(@"Escolha opção desejada para pessoa jurídica
 
-                        escolhaMenu = Convert.ToInt32(Console.ReadLine());
-                        Console.Clear();
+1  - Cadastrar 
+2  - Editar 
+3  - Listar
+4  - Buscar 
+5  - Total De Funcionários
+6  - Média De Funcionários
+7  - Cadastro Com Maior Nome De Empresa
+8  - Cadastro Com Menor Nome De Empresa
+10 - Sair");
+                        Console.WriteLine();
+                        validaMenu = true;
+                        while (validaMenu == true)
+                        {
+                            try
+                            {
+                                Console.Write("Opção Desejada: ");
+                                escolhaMenu = Convert.ToInt32(Console.ReadLine());
+                                Console.Clear();
+                                if ((escolhaMenu >= 1) && (escolhaMenu <= 10))
+                                {
+                                    validaMenu = false;
+                                }
+                                else
+                                {
+                                    Console.WriteLine("Ops ! Algo está errado, digite novamente o número da opção desejada ");
+                                    Console.WriteLine();
+                                }
+                            }
+                            catch (Exception)
+                            {
+                                
+                                Console.WriteLine("Escolha a opção desejada utilando apenas os números listados ");
+                                Console.WriteLine();
+                            }
+                        }
 
 
                         switch (escolhaMenu)
@@ -109,7 +142,7 @@ namespace NossaAplicacao
                                 menuPessoaJuridica.EmpresaMenorNome();
                                 break;
                             case 10:
-                                Console.Clear();
+                                menuPessoaJuridica.VoltarMenuJuridico();
                                 break;
 
 
@@ -120,7 +153,9 @@ namespace NossaAplicacao
                         break;
                     case 2:
                         Console.Clear();
-                        Console.WriteLine(@"
+                        Console.WriteLine();
+                        Console.WriteLine(@"Escolha a Opção Desejada para pessoa física
+
 1 - Cadastrar 
 2 - Editar 
 3 - Listar 
@@ -130,9 +165,34 @@ namespace NossaAplicacao
 7 - Pessoa Física Com Maior Nome
 8 - Pessoa Física Com Menor Nome
 9 - Sair");
-                        escolhaMenu = Convert.ToInt32(Console.ReadLine());
-                        Console.Clear();
+                        Console.WriteLine();
+                        validaMenu = true;
+                        while(validaMenu == true)
+                        {
+                            try
+                            {
+                                Console.Write("Opção Desejada ");
+                                escolhaMenu = Convert.ToInt32(Console.ReadLine());
+                                Console.Clear();
+                                if ((escolhaMenu <= 1) && (escolhaMenu <= 9))
+                                {
+                                    validaMenu = false;
+                                }
+                                else
+                                {
+                                    Console.WriteLine("Ops ! Algo está errado, digite novamente o número da opção desejada ");
+                                    Console.WriteLine();
 
+                                }
+
+                            }
+                            catch (Exception)
+                            {
+                                
+                                Console.WriteLine("Escolha a opção desejada utilando apenas os números listados ");
+                                Console.WriteLine();
+                            }
+                        }
 
                         switch (escolhaMenu)
                         {
@@ -176,8 +236,9 @@ namespace NossaAplicacao
 
                         break;
                     case 3:
-                        Console.Clear();
-                        Console.WriteLine(@"
+                        Console.Clear();                        
+                        Console.WriteLine(@"Escolha opção desejada para produtos
+
 1  - Cadastrar 
 2  - Editar 
 3  - Listar 
@@ -191,9 +252,34 @@ namespace NossaAplicacao
 11 - Total de quantidade de Produto
 12 - Média da Quantidade Total de Produto
 13 - Sair");
-                        escolhaMenu = Convert.ToInt32(Console.ReadLine());
-                        Console.Clear();
+                        Console.WriteLine();
+                        validaMenu = true;
+                        while(validaMenu == true)
+                        {
+                            try
+                            {
+                                Console.Write("Opção Desejada: ");
+                                escolhaMenu = Convert.ToInt32(Console.ReadLine());
+                                Console.Clear();
+                                if ((escolhaMenu <= 1) && (escolhaMenu <= 13))
+                                {
+                                    validaMenu = false;
+                                }
+                                else
+                                {
+                                    Console.WriteLine("Ops ! Algo está errado, digite novamente o número da opção desejada ");
+                                    Console.WriteLine();
 
+                                }
+
+                            }
+                            catch (Exception)
+                            {
+                                
+                                Console.WriteLine("Escolha a opção desejada utilando apenas os números listados ");
+                                Console.WriteLine();
+                            }
+                        }
 
                         switch (escolhaMenu)
                         {
@@ -235,7 +321,7 @@ namespace NossaAplicacao
                                 menuProdutos.MediaQuantidadeTotal();
                                 break;
                             case 13:
-                                Console.Clear();
+                                menuProdutos.VoltarMenuProduto();
                                 break;
 
                         }
@@ -244,7 +330,9 @@ namespace NossaAplicacao
                         break;
                     case 4:
                         Console.Clear();
-                        Console.WriteLine(@"
+                        Console.WriteLine();
+                        Console.WriteLine(@"Escolha a opção desejada para funcionários
+
 1 - Cadastrar
 2 - Editar 
 3 - Listar 
@@ -254,8 +342,35 @@ namespace NossaAplicacao
 7 - Funcionario Com Maior Nome 
 8 - Funcionario Com Menor Nome
 9 - Sair");
-                        escolhaMenu = Convert.ToInt32(Console.ReadLine());
-                        Console.Clear();
+
+                        Console.WriteLine();
+                        validaMenu = true;
+                        while (validaMenu == true)
+                        {
+                            try
+                            {
+                                Console.Write("Opção Desejada: ");
+                                escolhaMenu = Convert.ToInt32(Console.ReadLine());
+                                Console.Clear();
+                                if ((escolhaMenu <= 1) && (escolhaMenu <= 9))
+                                {
+                                    validaMenu = false;
+                                }
+                                else
+                                {
+                                    Console.WriteLine("Ops ! Algo está errado, digite novamente o número da opção desejada ");
+                                    Console.WriteLine();
+
+                                }
+
+                            }
+                            catch (Exception)
+                            {
+                               
+                                Console.WriteLine("Escolha a opção desejada utilando apenas os números listados ");
+                                Console.WriteLine();
+                            }
+                        }
 
 
                         switch (escolhaMenu)
@@ -308,8 +423,33 @@ namespace NossaAplicacao
 
 
                 }/*Primeiro Switch chave fechada*/
+
+                
                 Menu();
-                escolhaMenu = Convert.ToInt32(Console.ReadLine());
+                validaMenu = true;
+                while (validaMenu == true)
+                {
+                    try
+                    {
+                        Console.Write("Opção desejada: ");
+                        escolhaMenu = Convert.ToInt32(Console.ReadLine());
+                        if ((escolhaMenu >= 1) && (escolhaMenu <= 5))
+                        {
+                            validaMenu = false;
+                        }
+                        else
+                        {
+                            Console.WriteLine("Ops ! Algo está errado, digite novamente o número da opção desejada ");
+                            Console.WriteLine();
+                        }
+                    }
+                    catch (Exception)
+                    {
+                        
+                        Console.WriteLine("Escolha a opção desejada utilando apenas os números listados ");
+                        Console.WriteLine();
+                    }
+                }
             }
         }
     }
