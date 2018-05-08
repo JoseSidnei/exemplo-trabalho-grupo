@@ -222,7 +222,7 @@ namespace NossaAplicacao
                                 cadastroDePessoasFisica.MenorNome();
                                 break;
                             case 9:
-                                Console.Clear();
+                                cadastroDePessoasFisica.VoltarMenuFisico();
                                 break;
 
 
@@ -401,7 +401,7 @@ namespace NossaAplicacao
                                 cadastroDeFuncionarios.MenorNome();
                                 break;
                             case 9:
-                                Console.Clear();
+                                cadastroDeFuncionarios.VoltarMenuFuncionario();
                                 break;
 
 

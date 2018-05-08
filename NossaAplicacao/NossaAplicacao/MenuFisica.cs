@@ -216,5 +216,9 @@ namespace NossaAplicacao
 
             Console.WriteLine("Pessoa com menor nome: " + menornome);
         }
+        public void VoltarMenuFisico()
+        {
+            Console.Clear();
+        }
     }
 }

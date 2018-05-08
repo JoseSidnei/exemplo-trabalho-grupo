@@ -184,6 +184,10 @@ namespace NossaAplicacao
 
             Console.WriteLine("Funcionario com menor nome: " + menorNome);
         }
+        public void VoltarMenuFuncionario()
+        {
+            Console.Clear();
+        }
     }
 }
  
