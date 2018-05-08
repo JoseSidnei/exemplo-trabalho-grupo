@@ -22,7 +22,7 @@ namespace NossaAplicacao
 
         public void Menu()
         {
-            
+            Console.Clear();
             Console.WriteLine("Escolha a Opção Desejada ");
             Console.WriteLine(@"
           
@@ -404,21 +404,9 @@ namespace NossaAplicacao
                                 cadastroDeFuncionarios.VoltarMenuFuncionario();
                                 break;
 
-
-
-
-
-
-
                         }
 
                         break;
-
-
-
-
-
-
 
 
 
