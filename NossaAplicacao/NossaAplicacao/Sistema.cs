@@ -48,7 +48,7 @@ namespace NossaAplicacao
                 {
                     Console.Write("Opção desejada: ");
                     escolhaMenu = Convert.ToInt32(Console.ReadLine());
-                    Console.Clear();
+                    Console.WriteLine();
                     if ((escolhaMenu >= 1) && (escolhaMenu <= 5))
                     {
                         validaMenu = false;
@@ -93,7 +93,7 @@ namespace NossaAplicacao
                             {
                                 Console.Write("Opção Desejada: ");
                                 escolhaMenu = Convert.ToInt32(Console.ReadLine());
-                                Console.Clear();
+                                Console.WriteLine();
                                 if ((escolhaMenu >= 1) && (escolhaMenu <= 10))
                                 {
                                     validaMenu = false;
@@ -173,7 +173,7 @@ namespace NossaAplicacao
                             {
                                 Console.Write("Opção Desejada ");
                                 escolhaMenu = Convert.ToInt32(Console.ReadLine());
-                                Console.Clear();
+                                Console.WriteLine();
                                 if ((escolhaMenu <= 1) && (escolhaMenu <= 9))
                                 {
                                     validaMenu = false;
@@ -260,7 +260,7 @@ namespace NossaAplicacao
                             {
                                 Console.Write("Opção Desejada: ");
                                 escolhaMenu = Convert.ToInt32(Console.ReadLine());
-                                Console.Clear();
+                                Console.WriteLine();
                                 if ((escolhaMenu <= 1) && (escolhaMenu <= 13))
                                 {
                                     validaMenu = false;
@@ -351,7 +351,7 @@ namespace NossaAplicacao
                             {
                                 Console.Write("Opção Desejada: ");
                                 escolhaMenu = Convert.ToInt32(Console.ReadLine());
-                                Console.Clear();
+                                Console.WriteLine();
                                 if ((escolhaMenu <= 1) && (escolhaMenu <= 9))
                                 {
                                     validaMenu = false;
@@ -433,6 +433,7 @@ namespace NossaAplicacao
                     {
                         Console.Write("Opção desejada: ");
                         escolhaMenu = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine();
                         if ((escolhaMenu >= 1) && (escolhaMenu <= 5))
                         {
                             validaMenu = false;
