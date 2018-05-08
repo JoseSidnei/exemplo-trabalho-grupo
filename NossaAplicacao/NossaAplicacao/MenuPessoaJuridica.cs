@@ -332,9 +332,10 @@ namespace NossaAplicacao
                 {
                     try
                     {
+                        validaEndereco = true;
                         Console.Write("Endereço: ");
                         enderecos[atual] = Console.ReadLine();
-                        if (nomesEmpresa[atual].Length >= 10)
+                        if (nomesEmpresa[atual].Length >= 4)
                         {
                             validaEndereco = false;
                         }

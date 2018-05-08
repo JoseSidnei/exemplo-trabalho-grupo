@@ -124,6 +124,7 @@ namespace NossaAplicacao
 
         public void ListarProdutos()
         {
+
             Console.Clear();
             Console.WriteLine("Lista de Produtos ");
             for (int i = 0; i < atual; i++)
