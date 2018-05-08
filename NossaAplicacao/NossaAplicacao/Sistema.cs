@@ -22,7 +22,7 @@ namespace NossaAplicacao
 
         public void Menu()
         {
-            Console.Clear
+            Console.Clear();
             Console.WriteLine("Escolha a Opção Desejada ");
             Console.WriteLine(@"
           
