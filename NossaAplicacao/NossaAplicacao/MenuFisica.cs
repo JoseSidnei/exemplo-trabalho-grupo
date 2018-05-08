@@ -201,9 +201,8 @@ namespace NossaAplicacao
                 }
             }
 
-            Console.WriteLine("Pessoa Física com maior nome: " + maiornome);
+            Console.WriteLine("Empresa com Maior Nome: " + maiornome);
         }
-
         public void MenorNome()
         {
             for (int i = 0; i < atual; i++)
