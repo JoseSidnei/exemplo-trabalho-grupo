@@ -74,6 +74,7 @@ namespace NossaAplicacao
                 { /*Primeiro switch chave aberta*/
                     case 1:
                         Console.Clear();
+                        Console.WriteLine();
                         Console.WriteLine(@"Escolha opção desejada para pessoa jurídica
 
 1  - Cadastrar 
@@ -236,7 +237,8 @@ namespace NossaAplicacao
 
                         break;
                     case 3:
-                        Console.Clear();                        
+                        Console.Clear();
+                        Console.WriteLine();
                         Console.WriteLine(@"Escolha opção desejada para produtos
 
 1  - Cadastrar 
@@ -258,10 +260,11 @@ namespace NossaAplicacao
                         {
                             try
                             {
+                                
                                 Console.Write("Opção Desejada: ");
                                 escolhaMenu = Convert.ToInt32(Console.ReadLine());
                                 Console.WriteLine();
-                                if ((escolhaMenu <= 1) && (escolhaMenu <= 13))
+                                if ((escolhaMenu >= 1) && (escolhaMenu <= 13))
                                 {
                                     validaMenu = false;
                                 }
@@ -285,6 +288,7 @@ namespace NossaAplicacao
                         {
 
                             case 1:
+                                Console.Clear();
                                 menuProdutos.Produtos();
                                 break;
                             case 2:
@@ -325,7 +329,6 @@ namespace NossaAplicacao
                                 break;
 
                         }
-
                         
                         break;
                     case 4:
