@@ -174,7 +174,7 @@ namespace NossaAplicacao
             {
                 try
                 {
-                    Console.Write("CEP utilizando apenas números: ");
+                    Console.Write("CEP : ");
                     ceps[atual] = Convert.ToInt32(Console.ReadLine());
                     if (ceps[atual] > 0)
                     {
