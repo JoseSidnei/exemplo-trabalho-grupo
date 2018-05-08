@@ -30,7 +30,7 @@ namespace NossaAplicacao
 2  - Pessoa Física 
 3  - Produtos
 4  - Funcionários 
-5  - Sair");
+5  - Sair ");
             Console.WriteLine();
 
         }
@@ -148,7 +148,80 @@ namespace NossaAplicacao
 
                         }
 
-                        
+                        Console.Clear();
+                        Console.WriteLine(@"Escolha opção desejada para pessoa jurídica
+
+1  - Cadastrar 
+2  - Editar 
+3  - Listar
+4  - Buscar 
+5  - Total De Funcionários
+6  - Média De Funcionários
+7  - Cadastro Com Maior Nome De Empresa
+8  - Cadastro Com Menor Nome De Empresa
+10 - Sair");
+                        Console.WriteLine();
+                        validaMenu = true;
+                        while (validaMenu == true)
+                        {
+                            try
+                            {
+                                Console.Write("Opção Desejada: ");
+                                escolhaMenu = Convert.ToInt32(Console.ReadLine());
+                                Console.WriteLine();
+                                if ((escolhaMenu >= 1) && (escolhaMenu <= 10))
+                                {
+                                    validaMenu = false;
+                                }
+                                else
+                                {
+                                    Console.WriteLine("Ops ! Algo está errado, digite novamente o número da opção desejada ");
+                                    Console.WriteLine();
+                                }
+                            }
+                            catch (Exception)
+                            {
+                                
+                                Console.WriteLine("Escolha a opção desejada utilando apenas os números listados ");
+                                Console.WriteLine();
+                            }
+                        }
+
+
+                        switch (escolhaMenu)
+                        {
+
+                            case 1:
+                                Console.Clear();
+                                menuPessoaJuridica.CadastrarPessoaJuridica();
+                                break;
+                            case 2:
+                                menuPessoaJuridica.EditarPessoaJuridica();
+                                break;
+                            case 3:
+                                menuPessoaJuridica.ListarPessoaJuridica();
+                                break;
+                            case 4:
+                                menuPessoaJuridica.BuscarPessoaJuridica();
+                                break;
+                            case 5:
+                                menuPessoaJuridica.TotalDeFuncionario();
+                                break;
+                            case 6:
+                                menuPessoaJuridica.MediaDeFuncionarios();
+                                break;
+                            case 7:
+                                menuPessoaJuridica.EmpresaMaiorNome();
+                                break;
+                            case 8:
+                                menuPessoaJuridica.EmpresaMenorNome();
+                                break;
+                            case 10:
+                                menuPessoaJuridica.VoltarMenuJuridico();
+                                break;
+
+
+                        }
 
                         break;
                     case 2:
@@ -404,23 +477,9 @@ namespace NossaAplicacao
                                 cadastroDeFuncionarios.VoltarMenuFuncionario();
                                 break;
 
-
-
-
-
-
-
                         }
 
                         break;
-
-
-
-
-
-
-
-
 
                 }/*Primeiro Switch chave fechada*/
 

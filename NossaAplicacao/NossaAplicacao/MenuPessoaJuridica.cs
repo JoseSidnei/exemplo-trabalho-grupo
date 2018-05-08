@@ -176,16 +176,8 @@ namespace NossaAplicacao
                 {
                     Console.Write("CEP : ");
                     ceps[atual] = Convert.ToInt32(Console.ReadLine());
-                    if (ceps[atual] > 0)
-                    {
-                       validaCep = false;
-                    }
-                    else
-                    {
-                        Console.WriteLine("Número precisa ser maior que 0 ");
-                    }
-
-                  
+                    validaCep = false;
+                                     
                 }
                 catch (Exception )
                 {
@@ -264,7 +256,7 @@ namespace NossaAplicacao
         public void EditarPessoaJuridica()
         {
             Console.Clear();
-            Console.WriteLine("Digite um nome para pesquisa");
+            Console.Write("Digite um nome para pesquisa ");
             string nomePessoaJuridicaPesquisado = Console.ReadLine().ToLower().Trim();
             int posicao = -1;
             for (int i = 0; i < atual; i++)
@@ -274,6 +266,7 @@ namespace NossaAplicacao
                     posicao = i;
                 }
             }
+
             if (posicao != -1)
             {
 
@@ -297,7 +290,7 @@ namespace NossaAplicacao
                     {
                         Console.WriteLine("Por favor informe o Nome da empresa novamente, utilizando apenas letras ");
                     }
-                }
+               }
 
 
                 validaTelefone = true;
