@@ -22,7 +22,7 @@ namespace NossaAplicacao
 
         public void Menu()
         {
-            Console.Clear();
+            
             Console.WriteLine("Escolha a Opção Desejada ");
             Console.WriteLine(@"
           
@@ -117,7 +117,7 @@ namespace NossaAplicacao
                         {
 
                             case 1:
-                                
+                                Console.Clear();
                                 menuPessoaJuridica.CadastrarPessoaJuridica();
                                 break;
                             case 2:
@@ -352,7 +352,7 @@ namespace NossaAplicacao
                                 Console.Write("Opção Desejada: ");
                                 escolhaMenu = Convert.ToInt32(Console.ReadLine());
                                 Console.WriteLine();
-                                if ((escolhaMenu <= 1) && (escolhaMenu <= 9))
+                                if ((escolhaMenu >= 1) && (escolhaMenu <= 9))
                                 {
                                     validaMenu = false;
                                 }
@@ -404,9 +404,21 @@ namespace NossaAplicacao
                                 cadastroDeFuncionarios.VoltarMenuFuncionario();
                                 break;
 
+
+
+
+
+
+
                         }
 
                         break;
+
+
+
+
+
+
 
 
 
