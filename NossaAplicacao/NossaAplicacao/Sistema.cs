@@ -117,7 +117,7 @@ namespace NossaAplicacao
                         {
 
                             case 1:
-                                Console.Clear();
+                                
                                 menuPessoaJuridica.CadastrarPessoaJuridica();
                                 break;
                             case 2:
