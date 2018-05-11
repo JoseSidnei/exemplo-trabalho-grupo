@@ -23,14 +23,24 @@ namespace NossaAplicacao
         public void Menu()
         {
             
-            Console.WriteLine("Escolha a Opção Desejada ");
-            Console.WriteLine(@"
+            Console.WriteLine("*************************  Menu  ************************");
+            Console.WriteLine(@"*********************** Principal  ********************
+                                
+
+
+               --------------------------
+               |1|   Pessoa Jurídica    |
+               |------------------------|
+               |2|   Pessoa Física      |
+               |------------------------|
+               |3|   Produtos           |
+               |------------------------|
+               |4|   Funcionários       |
+               |------------------------|
+               |5|   Sair               |
+               |------------------------|
+                                 ");        
           
-1  - Pessoa Jurídica
-2  - Pessoa Física 
-3  - Produtos
-4  - Funcionários 
-5  - Sair");
             Console.WriteLine();
 
         }
@@ -75,17 +85,29 @@ namespace NossaAplicacao
                     case 1:
                         Console.Clear();
                         Console.WriteLine();
-                        Console.WriteLine(@"Escolha opção desejada para pessoa jurídica
+                        Console.WriteLine(@"     ******************** PESSOA ********************
+************************ JURÍDICA  ************************
 
-1  - Cadastrar 
-2  - Editar 
-3  - Listar
-4  - Buscar 
-5  - Total De Funcionários
-6  - Média De Funcionários
-7  - Cadastro Com Maior Nome De Empresa
-8  - Cadastro Com Menor Nome De Empresa
-10 - Sair");
+     --------------------------------------------
+     | 1  | Cadastrar                            |
+     |-------------------------------------------|
+     | 2  | Editar                               |
+     |-------------------------------------------|
+     | 3  | Listar                               |
+     |-------------------------------------------|
+     | 4  | Buscar                               |
+     |-------------------------------------------|
+     | 5  | Total De Funcionários                |
+     |-------------------------------------------|
+     | 6  | Média De Funcionários                |
+     |-------------------------------------------|
+     | 7  | Cadastro Com Maior Nome De Empresa   |
+     |-------------------------------------------|
+     | 8  | Cadastro Com Menor Nome De Empresa   |
+     |-------------------------------------------|
+     | 10 | Sair                                 |
+     |-------------------------------------------|");  
+                        
                         Console.WriteLine();
                         validaMenu = true;
                         while (validaMenu == true)
@@ -149,30 +171,42 @@ namespace NossaAplicacao
 
                         }
 
-                        
-
                         break;
                     case 2:
                         Console.Clear();
                         Console.WriteLine();
-                        Console.WriteLine(@"Escolha a Opção Desejada para pessoa física
+                        Console.WriteLine(@"    ******************************  PESSOA  ******************************
+*************************************  FÍSICA  *******************************
 
-1 - Cadastrar 
-2 - Editar 
-3 - Listar 
-4 - Buscar  
-5 - Total Das Idades de Pessoas Físicas
-6 - Média Das Idades de Pessoas Físicas
-7 - Pessoa Física Com Maior Nome
-8 - Pessoa Física Com Menor Nome
-9 - Sair");
+
+               ---------------------------------------------|
+               |1 |  Cadastrar                              |
+               |--------------------------------------------|
+               |2 |  Editar                                 |
+               |--------------------------------------------|
+               |3 |  Listar                                 |
+               |--------------------------------------------|
+               |4 |  Buscar                                 |
+               |--------------------------------------------|
+               |5 |  Total Das Idades de Pessoas Físicas    |
+               |--------------------------------------------|
+               |6 |  Média Das Idades de Pessoas Físicas    |
+               |--------------------------------------------|
+               |7 |  Pessoa Física Com Maior Nome           |
+               |--------------------------------------------|
+               |8 |  Pessoa Física Com Menor Nome           |
+               |--------------------------------------------|
+               |9 |  Sair                                   |
+               |--------------------------------------------|");
+
+
                         Console.WriteLine();
                         validaMenu = true;
                         while(validaMenu == true)
                         {
                             try
                             {
-                                Console.Write("Opção Desejada ");
+                                Console.Write("Opção Desejada: ");
                                 escolhaMenu = Convert.ToInt32(Console.ReadLine());
                                 Console.WriteLine();
                                 if ((escolhaMenu >= 1) && (escolhaMenu <= 9))
@@ -239,21 +273,37 @@ namespace NossaAplicacao
                     case 3:
                         Console.Clear();
                         Console.WriteLine();
-                        Console.WriteLine(@"Escolha opção desejada para produtos
+                        Console.WriteLine(@"*************************************************  PRODUTOS  *************************************************
 
-1  - Cadastrar 
-2  - Editar 
-3  - Listar 
-4  - Buscar 
-5  - Total Dos Valores Dos Produtos
-6  - Média Dos Valores Dos Produtos
-7  - Maior Valor
-8  - Menor Valor
-9  - Cadastro com Maior Nome de Produto
-10 - Cadastro com Menor Nome de Produto
-11 - Total de quantidade de Produto
-12 - Média da Quantidade Total de Produto
-13 - Sair");
+
+                              ----------------------------------------------
+                              |1  |  Cadastrar                             |
+                              |---|----------------------------------------|
+                              |2  |  Editar                                |
+                              |---|----------------------------------------|
+                              |3  |  Listar                                |
+                              |---|----------------------------------------|
+                              |4  |  Buscar                                |
+                              |---|----------------------------------------|
+                              |5  |  Total Dos Valores Dos Produtos        |
+                              |---|----------------------------------------|
+                              |6  |  Média Dos Valores Dos Produtos        |
+                              |---|----------------------------------------|
+                              |7  |  Maior Valor                           |
+                              |---|----------------------------------------|
+                              |8  |  Menor Valor                           |
+                              |---|----------------------------------------|
+                              |9  |  Cadastro com Maior Nome de Produto    |
+                              |---|----------------------------------------|
+                              |10 |  Cadastro com Menor Nome de Produto    |
+                              |---|----------------------------------------|
+                              |11 |  Total de quantidade de Produto        |
+                              |---|----------------------------------------|
+                              |12 |  Média da Quantidade Total de Produto  |
+                              |---|----------------------------------------|
+                              |13 |  Sair                                  |
+                              |---|----------------------------------------|");
+
                         Console.WriteLine();
                         validaMenu = true;
                         while(validaMenu == true)
@@ -334,17 +384,30 @@ namespace NossaAplicacao
                     case 4:
                         Console.Clear();
                         Console.WriteLine();
-                        Console.WriteLine(@"Escolha a opção desejada para funcionários
+                        Console.WriteLine(@"************************************************** funcionários **************************************************
 
-1 - Cadastrar
-2 - Editar 
-3 - Listar 
-4 - Buscar 
-5 - Total Dos Codigos Dos Funcionário
-6 - Média Dos Codigos Dos Funcionário
-7 - Funcionario Com Maior Nome 
-8 - Funcionario Com Menor Nome
-9 - Sair");
+
+
+                                    ------------------------------------------
+                                    |1 |  Cadastrar                          |
+                                    |--|-------------------------------------|
+                                    |2 |  Editar                             |
+                                    |--|-------------------------------------|
+                                    |3 |  Listar                             |
+                                    |--|-------------------------------------|
+                                    |4 |  Buscar                             |
+                                    |--|-------------------------------------|
+                                    |5 |  Total Dos Codigos Dos Funcionário  |
+                                    |--|-------------------------------------|
+                                    |6 |  Média Dos Codigos Dos Funcionário  |
+                                    |--|-------------------------------------|
+                                    |7 |  Funcionario Com Maior Nome         |
+                                    |--|-------------------------------------|
+                                    |8 |  Funcionario Com Menor Nome         |
+                                    |--|-------------------------------------|
+                                    |9 |  Sair                               |
+                                    |--|-------------------------------------|");
+
 
                         Console.WriteLine();
                         validaMenu = true;

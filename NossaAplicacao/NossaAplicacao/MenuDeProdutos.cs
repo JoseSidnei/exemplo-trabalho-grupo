@@ -140,6 +140,7 @@ namespace NossaAplicacao
 
         internal void BuscarProduto()
         {
+            Console.Clear();
             Console.Write("Digite o nome para busca: ");
             string nomeProdutoBuscado = Console.ReadLine();
             bool achou = false;
@@ -186,8 +187,8 @@ namespace NossaAplicacao
                     try
                     {
                         Console.Write("Nome do Produto: ");
-                        nomeProduto[atual] = Console.ReadLine();
-                        if (nomeProduto[atual].Length >= 4)
+                        nomeProduto[posicao] = Console.ReadLine();
+                        if (nomeProduto[posicao].Length >= 4)
                         {
                             validaProduto = false;
                         }
@@ -208,8 +209,8 @@ namespace NossaAplicacao
                     try
                     {
                         Console.Write("Tipo: ");
-                        tiposDeProdutos[atual] = Console.ReadLine();
-                        if (tiposDeProdutos[atual].Length >= 4)
+                        tiposDeProdutos[posicao] = Console.ReadLine();
+                        if (tiposDeProdutos[posicao].Length >= 4)
                         {
                             validaTipo = false;
                         }
@@ -230,8 +231,8 @@ namespace NossaAplicacao
                     try
                     {
                         Console.Write("Quantidade de Produtos: ");
-                        quantidadeProdutos[atual] = Convert.ToInt32(Console.ReadLine());
-                        if (quantidadeProdutos[atual] > 0)
+                        quantidadeProdutos[posicao] = Convert.ToInt32(Console.ReadLine());
+                        if (quantidadeProdutos[posicao] > 0)
                         {
                             validaQuantidade = false;
 
@@ -254,8 +255,8 @@ namespace NossaAplicacao
                     try
                     {
                         Console.Write("Valor: ");
-                        valores[atual] = Convert.ToDouble(Console.ReadLine());
-                        if (valores[atual] > 0)
+                        valores[posicao] = Convert.ToDouble(Console.ReadLine());
+                        if (valores[posicao] > 0)
                         {
                             validaValor = false;
 
@@ -286,8 +287,6 @@ namespace NossaAplicacao
         public void TotalDosValoresDosProdutos()
         {
             Console.Clear();
-
-
             for (int i = 0; i < valores.Length; i++)
             {
                 somaDoValorProdutos = valores[i] + somaDoValorProdutos;
@@ -301,6 +300,7 @@ namespace NossaAplicacao
 
         public void MediaDosValoresDosProdutos()
         {
+            Console.Clear();
             for (int i = 0; i < valores.Length; i++)
             {
                mediaValor  = somaDoValorProdutos / atual;
@@ -314,6 +314,7 @@ namespace NossaAplicacao
 
         public void MaiorValorDeProdutos()
         {
+            Console.Clear();
             for (int i = 0; i < atual; i++)
             {                
                 if (valores.Length > maiorValor)
@@ -329,6 +330,7 @@ namespace NossaAplicacao
 
         public void MenorValorDeProdutos()
         {
+            Console.Clear();
             for (int i = 0; i < nomeProduto.Length; i++)
             {
 
@@ -346,6 +348,7 @@ namespace NossaAplicacao
 
         public void MaiorNomeProduto()
         {
+            Console.Clear();
             for (int i = 0; i < atual; i++)
             {
                 if (nomeProduto[i].Length > maiorNomeProduto.Length)
@@ -360,6 +363,7 @@ namespace NossaAplicacao
 
         public void MenorNomeProduto()
         {
+            Console.Clear();
             for (int i = 0; i < atual; i++)
             {
                 if (nomeProduto[i].Length < menorNomeProduto.Length)
@@ -373,6 +377,7 @@ namespace NossaAplicacao
 
         public void TotalQuantidadeProduto()
         {
+            Console.Clear();
             for (int i = 0; i < quantidadeProdutos.Length; i++)
             {
                 somaQuantidadeProdutos = quantidadeProdutos[i] + somaQuantidadeProdutos;
@@ -383,6 +388,7 @@ namespace NossaAplicacao
 
         public void MediaQuantidadeTotal()
         {
+            Console.Clear();
             for (int i = 0; i < quantidadeProdutos.Length; i++)
             {
                 mediaQuantidadeProdutos = somaQuantidadeProdutos / atual;

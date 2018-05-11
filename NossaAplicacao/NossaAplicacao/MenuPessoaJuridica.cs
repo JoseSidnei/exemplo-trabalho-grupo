@@ -33,7 +33,7 @@ namespace NossaAplicacao
                 try
                 {
                     Console.Write("Nome da Empresa: ");
-                    nomesEmpresa[atual] = Console.ReadLine();
+                    nomesEmpresa[atual] = Console.ReadLine().ToLower().Trim();
                     if (nomesEmpresa[atual].Length >= 4)
                     {
                         validarTexto = false;
@@ -204,6 +204,7 @@ namespace NossaAplicacao
             }
 
             atual++;
+            Console.Clear();
 
 
         }
@@ -227,6 +228,7 @@ namespace NossaAplicacao
 
         internal void BuscarPessoaJuridica()
         {
+            Console.Clear();
             Console.Write("Digite o nome para busca: ");
             string nomePessoaJuridicaBuscado = Console.ReadLine();
             bool achou = false;
@@ -276,8 +278,8 @@ namespace NossaAplicacao
                     try
                     {
                         Console.Write("Nome da Empresa: ");
-                        nomesEmpresa[atual] = Console.ReadLine();
-                        if (nomesEmpresa[atual].Length >= 4)
+                        nomesEmpresa[posicao] = Console.ReadLine();
+                        if (nomesEmpresa[posicao].Length >= 4)
                         {
                             validarTexto = false;
                         }
@@ -299,8 +301,8 @@ namespace NossaAplicacao
                     try
                     {
                         Console.Write("Telefone para contato: ");
-                        telefones[atual] = Convert.ToInt32(Console.ReadLine());
-                        if (telefones[atual] > 0)
+                        telefones[posicao] = Convert.ToInt32(Console.ReadLine());
+                        if (telefones[posicao] > 0)
                         {
                             validaTelefone = false;
                         }
@@ -327,8 +329,8 @@ namespace NossaAplicacao
                     {
                         validaEndereco = true;
                         Console.Write("Endereço: ");
-                        enderecos[atual] = Console.ReadLine();
-                        if (nomesEmpresa[atual].Length >= 4)
+                        enderecos[posicao] = Console.ReadLine();
+                        if (nomesEmpresa[posicao].Length >= 4)
                         {
                             validaEndereco = false;
                         }
@@ -350,8 +352,16 @@ namespace NossaAplicacao
                     try
                     {
                         Console.Write("Número: ");
-                        numero[atual] = Convert.ToInt32(Console.ReadLine());
-                        validaNumero = false;
+                        numero[posicao] = Convert.ToInt32(Console.ReadLine());
+                        if (numero[posicao] >= 0)
+                        {
+                            validaNumero = false;
+
+                        }
+                        else
+                        {
+                            Console.WriteLine("Número deve ser maior que 0");
+                        }
                     }
                     catch (Exception)
                     {
@@ -366,8 +376,8 @@ namespace NossaAplicacao
                     try
                     {
                         Console.Write("Cidade: ");
-                        cidades[atual] = Console.ReadLine();
-                        if (cidades[atual].Length >= 4)
+                        cidades[posicao] = Console.ReadLine();
+                        if (cidades[posicao].Length >= 4)
                         {
                             validaCidade = false;
                         }
@@ -388,8 +398,8 @@ namespace NossaAplicacao
                     try
                     {
                         Console.Write("Bairro: ");
-                        bairros[atual] = Console.ReadLine();
-                        if (bairros[atual].Length >= 4)
+                        bairros[posicao] = Console.ReadLine();
+                        if (bairros[posicao].Length >= 4)
                         {
                             validaBairro = false;
                         }
@@ -411,8 +421,8 @@ namespace NossaAplicacao
                     try
                     {
                         Console.Write("CEP: ");
-                        ceps[atual] = Convert.ToInt32(Console.ReadLine());
-                        if (ceps[atual] > 0)
+                        ceps[posicao] = Convert.ToInt32(Console.ReadLine());
+                        if (ceps[posicao] > 0)
                         {
                             validaCep = false;
                         }
@@ -435,8 +445,8 @@ namespace NossaAplicacao
                     try
                     {
                         Console.Write("Quantidade de Funcionários: ");
-                        quantidadeFuncionarios[atual] = Convert.ToInt32(Console.ReadLine());
-                        if (quantidadeFuncionarios[atual] > 0)
+                        quantidadeFuncionarios[posicao] = Convert.ToInt32(Console.ReadLine());
+                        if (quantidadeFuncionarios[posicao] > 0)
                         {
                             validaQuantidadeFuncionario = false;
 
@@ -459,10 +469,13 @@ namespace NossaAplicacao
                 Console.WriteLine("Registro não encontrado");
 
             }
+
+            Console.Clear();
         }
 
        public void TotalDeFuncionario()
        {
+            Console.Clear();
             for (int i = 0; i < quantidadeFuncionarios.Length; i++)
             {
                 somaQuantidadeFuncionarios = quantidadeFuncionarios[i] +  somaQuantidadeFuncionarios;
@@ -474,6 +487,7 @@ namespace NossaAplicacao
 
         public void MediaDeFuncionarios()
         {
+            Console.Clear();
             for (int i = 0; i < quantidadeFuncionarios.Length; i++)
             {
                 mediaDeFuncionarios = somaQuantidadeFuncionarios / atual;
@@ -484,6 +498,7 @@ namespace NossaAplicacao
 
         public void EmpresaMaiorNome()
         {
+            Console.Clear();
             for (int i = 0; i < atual; i++)
             {
                 if (nomesEmpresa[i].Length > maiorNomeJuridico.Length)
@@ -497,6 +512,7 @@ namespace NossaAplicacao
 
         public void EmpresaMenorNome()
         {
+            Console.Clear();
             for (int i = 0; i < atual; i++)
             {
                 if (nomesEmpresa[i].Length < menorNomeJuridico.Length)
